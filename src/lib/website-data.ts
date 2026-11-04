@@ -212,7 +212,7 @@ export const COURSES_DATA: Course[] = [
 export const FACULTY_DATA: FacultyMember[] = [
   {
     id: "f1",
-    name: "Dr. Himanshu Sharma",
+    name: "Dr. Himanshu Rai",
     designation: "Founder & Chief Mentor",
     subject: "Indian History, Culture & Ethics (GS 1 & 4)",
     qualification: "Ph.D. History (JNU), IAS (Allied) Ranker",
@@ -372,7 +372,7 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
 
 export const GALLERY_DATA: GalleryItem[] = [
   { id: "g1", title: "Smart Hybrid Classrooms", category: "Infrastructure", caption: "Air-conditioned digital smart classrooms with interactive 85-inch 4K panels.", aspect: "4/3" },
-  { id: "g2", title: "Dr. Himanshu Sharma Seminar", category: "Seminars", caption: "Annual UPSC Preparation Strategy Seminar attended by 1,200+ aspirants.", aspect: "16/9" },
+  { id: "g2", title: "Dr. Himanshu Rai Seminar", category: "Seminars", caption: "Annual UPSC Preparation Strategy Seminar attended by 1,200+ aspirants.", aspect: "16/9" },
   { id: "g3", title: "Central Reading Library", category: "Infrastructure", caption: "24x7 Silent Study Library with 5,000+ reference volumes and high-speed Wi-Fi.", aspect: "4/3" },
   { id: "g4", title: "Annual Toppers Felicitation", category: "Celebrations", caption: "Honoring our successful officers with gold medals and family gatherings.", aspect: "16/9" },
   { id: "g5", title: "Mock Interview Board in Session", category: "Mentorship", caption: "Panel of retired IAS/IPS officers evaluating candidates in realistic setup.", aspect: "4/3" },

@@ -37,7 +37,7 @@ export const COURSES = [
     thumbnail: "/api/placeholder/400/250",
     badge: "Best Seller",
     badgeColor: "gold",
-    teacher: "Dr. Himanshu Sharma",
+    teacher: "Dr. Himanshu Rai",
     highlights: ["GS Complete Coverage", "Essay & Ethics", "Optional Support", "Test Series"],
     description: "Comprehensive foundation program covering all aspects of UPSC Civil Services Examination with integrated test series.",
     syllabus: ["Prelims GS Paper I", "Prelims GS Paper II (CSAT)", "Mains GS Papers I-IV", "Essay Writing", "Ethics & Integrity", "Optional Subject"],
@@ -142,7 +142,7 @@ export const COURSES = [
 export const FACULTY = [
   {
     id: "1",
-    name: "Dr. Himanshu Sharma",
+    name: "Dr. Himanshu Rai",
     role: "Director & Chief Mentor",
     subject: "General Studies, History",
     image: "/api/placeholder/200/200",
@@ -151,7 +151,7 @@ export const FACULTY = [
     students: "20,000+",
     results: "500+ selections",
     rating: 4.9,
-    bio: "Former IAS officer with 18 years of teaching experience. Dr. Sharma has personally mentored over 500 UPSC selections.",
+    bio: "Former IAS officer with 18 years of teaching experience. Dr. Rai has personally mentored over 500 UPSC selections.",
     specialization: ["Ancient History", "Medieval History", "Post-Independence India", "Art & Culture"],
     social: { youtube: "#", linkedin: "#" },
   },
@@ -247,12 +247,12 @@ export const TESTIMONIALS = [
   { id: "3", name: "Suresh Kumar", course: "SSC CGL Complete", rating: 5, text: "The shortcuts and tricks taught here are amazing. I improved my score from 140 to 185 in just 3 months of serious preparation.", photo: "/api/placeholder/60/60", selected: "SSC CGL Tier-II Qualifier" },
   { id: "4", name: "Priyanka Dubey", course: "Bank PO Complete", rating: 4, text: "Very good institute for banking exams. Got selected in IBPS PO in first attempt. The current affairs section is particularly strong.", photo: "/api/placeholder/60/60", selected: "IBPS PO 2024" },
   { id: "5", name: "Amit Tiwari", course: "Current Affairs Daily", rating: 5, text: "The daily current affairs coverage is comprehensive and exam-oriented. The monthly compilation is perfect for revision.", photo: "/api/placeholder/60/60", selected: "UPSC 2024 Aspirant" },
-  { id: "6", name: "Neha Singh", course: "UPSC CSE Foundation", rating: 5, text: "Best decision of my life to join Himanshu Classes. The mentorship program and interview guidance by Dr. Sharma is extraordinary.", photo: "/api/placeholder/60/60", selected: "IPS Probationer" },
+  { id: "6", name: "Neha Singh", course: "UPSC CSE Foundation", rating: 5, text: "Best decision of my life to join Himanshu Classes. The mentorship program and interview guidance by Dr. Rai is extraordinary.", photo: "/api/placeholder/60/60", selected: "IPS Probationer" },
 ];
 
 export const ANNOUNCEMENTS = [
   { id: "1", title: "UPSC CSE 2025 Foundation Batch Starts December 1", date: "2026-11-15", category: "Admission", priority: "high", content: "New batch starting for UPSC CSE 2025 aspirants. Limited seats available. Early bird discount of 15% for registrations before November 30." },
-  { id: "2", title: "Free Seminar: How to Crack UPSC in First Attempt", date: "2026-11-20", category: "Event", priority: "medium", content: "Attend our free seminar by Dr. Himanshu Sharma on November 20, 2026. Register on the website or call us." },
+  { id: "2", title: "Free Seminar: How to Crack UPSC in First Attempt", date: "2026-11-20", category: "Event", priority: "medium", content: "Attend our free seminar by Dr. Himanshu Rai on November 20, 2026. Register on the website or call us." },
   { id: "3", title: "UPSC Prelims 2025 Result Analysis", date: "2026-11-10", category: "Results", priority: "medium", content: "We are proud to announce 847 selections from Himanshu Classes in UPSC Prelims 2025. Congratulations to all!" },
   { id: "4", title: "New Study Material for Current Affairs Oct 2026", date: "2026-11-01", category: "Material", priority: "low", content: "October 2026 Current Affairs comprehensive PDF now available in the student portal." },
   { id: "5", title: "Holiday on November 15 (Children's Day)", date: "2026-11-08", category: "Holiday", priority: "low", content: "Institute will remain closed on November 15, 2026 on account of Children's Day. Classes to resume November 16." },
@@ -298,7 +298,7 @@ export const STUDENT_MOCK = {
 };
 
 export const ENROLLED_COURSES = [
-  { id: "1", title: "UPSC CSE Foundation", progress: 42, lastAccessed: "2 hours ago", nextLesson: "Medieval History — Chapter 12", instructor: "Dr. Himanshu Sharma", totalLessons: 180, completedLessons: 76, color: "navy" },
+  { id: "1", title: "UPSC CSE Foundation", progress: 42, lastAccessed: "2 hours ago", nextLesson: "Medieval History — Chapter 12", instructor: "Dr. Himanshu Rai", totalLessons: 180, completedLessons: 76, color: "navy" },
   { id: "2", title: "Current Affairs Daily", progress: 78, lastAccessed: "Yesterday", nextLesson: "November 2026 Week 1", instructor: "Dr. Kavita Rao", totalLessons: 90, completedLessons: 70, color: "gold" },
   { id: "3", title: "UPSC Mains Test Series", progress: 25, lastAccessed: "3 days ago", nextLesson: "GS Paper I Mock Test 8", instructor: "Dr. Priya Anand", totalLessons: 70, completedLessons: 18, color: "blue" },
 ];
@@ -317,13 +317,13 @@ export const TEST_RESULTS = [
 ];
 
 export const LIVE_CLASSES = [
-  { id: "1", title: "Medieval History: Delhi Sultanate", instructor: "Dr. Himanshu Sharma", date: "2026-11-03", time: "9:00 AM", duration: "90 min", status: "upcoming", thumbnail: "/api/placeholder/300/180" },
+  { id: "1", title: "Medieval History: Delhi Sultanate", instructor: "Dr. Himanshu Rai", date: "2026-11-03", time: "9:00 AM", duration: "90 min", status: "upcoming", thumbnail: "/api/placeholder/300/180" },
   { id: "2", title: "Indian Geography: Climate Zones", instructor: "Dr. Priya Anand", date: "2026-11-03", time: "2:00 PM", duration: "90 min", status: "upcoming", thumbnail: "/api/placeholder/300/180" },
   { id: "3", title: "Budget 2026-27 Analysis", instructor: "Meera Verma", date: "2026-11-02", time: "10:00 AM", duration: "120 min", status: "completed", thumbnail: "/api/placeholder/300/180" },
 ];
 
 export const RECORDED_LECTURES = [
-  { id: "1", title: "Ancient History Complete — Part 1", instructor: "Dr. Himanshu Sharma", duration: "2h 15m", views: 4200, thumbnail: "/api/placeholder/300/180", subject: "History", date: "2026-10-20" },
+  { id: "1", title: "Ancient History Complete — Part 1", instructor: "Dr. Himanshu Rai", duration: "2h 15m", views: 4200, thumbnail: "/api/placeholder/300/180", subject: "History", date: "2026-10-20" },
   { id: "2", title: "Physical Geography: Landforms & Erosion", instructor: "Dr. Priya Anand", duration: "1h 45m", views: 3100, thumbnail: "/api/placeholder/300/180", subject: "Geography", date: "2026-10-18" },
   { id: "3", title: "Indian Constitution — Fundamental Rights", instructor: "Rajesh Kumar Singh", duration: "1h 30m", views: 5800, thumbnail: "/api/placeholder/300/180", subject: "Polity", date: "2026-10-15" },
   { id: "4", title: "Indian Economy: Basic Concepts", instructor: "Meera Verma", duration: "2h 05m", views: 2700, thumbnail: "/api/placeholder/300/180", subject: "Economy", date: "2026-10-12" },

@@ -76,7 +76,7 @@ export default function AboutPage() {
                 <span className="hc-badge">History & Evolution</span>
                 <h2 className="hc-section-title">The Himanshu Classes Philosophy</h2>
                 <p style={{ fontSize: '1rem', color: '#64748B', lineHeight: 1.8, marginBottom: '20px' }}>
-                  Founded by <strong>Dr. Himanshu Sharma</strong>, former civil services consultant and academician, Himanshu Classes was created with a single mission: to provide honest, rigorous, and result-oriented competitive coaching that eliminates commercial gimmicks.
+                  Founded by <strong>Dr. Himanshu Rai</strong>, former civil services consultant and academician, Himanshu Classes was created with a single mission: to provide honest, rigorous, and result-oriented competitive coaching that eliminates commercial gimmicks.
                 </p>
                 <p style={{ fontSize: '1rem', color: '#64748B', lineHeight: 1.8, marginBottom: '24px' }}>
                   We firmly believe that dedicated mentorship, structured learning, and daily answer writing practice can elevate any disciplined aspirant into top merit ranks.
@@ -128,7 +128,7 @@ export default function AboutPage() {
                 >
                   HS
                 </div>
-                <h3 style={{ fontSize: '1.375rem', fontWeight: 800, color: '#142B4A' }}>Dr. Himanshu Sharma</h3>
+                <h3 style={{ fontSize: '1.375rem', fontWeight: 800, color: '#142B4A' }}>Dr. Himanshu Rai</h3>
                 <div style={{ fontSize: '0.8125rem', color: '#D9A441', fontWeight: 700, textTransform: 'uppercase', marginBottom: '14px' }}>
                   Founder, Director & Chief Mentor
                 </div>

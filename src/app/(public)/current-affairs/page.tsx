@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Clock, Tag, BookOpen, ChevronRight, Mail, ArrowRight } from 'lucide-react';
-import PublicLayout from '@/components/layout/PublicLayout';
+
 import { CURRENT_AFFAIRS_ARTICLES } from '@/lib/mock-data';
 
 // Extend articles with more mock data for a fuller page
@@ -48,7 +48,7 @@ export default function CurrentAffairsPage() {
   };
 
   return (
-    <PublicLayout>
+    <>
       {/* Hero */}
       <section
         className="text-white py-20 px-4 text-center"
@@ -277,6 +277,6 @@ export default function CurrentAffairsPage() {
           </motion.div>
         </section>
       </div>
-    </PublicLayout>
+    </>
   );
 }

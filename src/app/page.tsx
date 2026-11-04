@@ -395,7 +395,7 @@ export default function HomePage() {
                   <span style={{ color: '#2457A7' }}>Not Just Coaching Students</span>
                 </h2>
                 <p style={{ fontSize: '1rem', color: '#64748B', lineHeight: 1.8, marginBottom: '20px' }}>
-                  Founded in 2008 by Dr. Himanshu Sharma, Himanshu Classes has stood at the pinnacle of competitive examination guidance in Northern India. We combine traditional academic discipline with state-of-the-art multimedia smart classrooms.
+                  Founded in 2008 by Dr. Himanshu Rai, Himanshu Classes has stood at the pinnacle of competitive examination guidance in Northern India. We combine traditional academic discipline with state-of-the-art multimedia smart classrooms.
                 </p>
                 <p style={{ fontSize: '1rem', color: '#64748B', lineHeight: 1.8, marginBottom: '28px' }}>
                   Our mission goes beyond clearing examinations — we develop administrative foresight, ethical integrity, and a deep commitment to public service in every aspirant.
@@ -481,7 +481,7 @@ export default function HomePage() {
                     HS
                   </div>
                   <div>
-                    <div style={{ fontSize: '1.0625rem', fontWeight: 800, color: '#FFFFFF' }}>Dr. Himanshu Sharma</div>
+                    <div style={{ fontSize: '1.0625rem', fontWeight: 800, color: '#FFFFFF' }}>Dr. Himanshu Rai</div>
                     <div style={{ fontSize: '0.8125rem', color: '#D9A441' }}>Director & Chief Mentor • Ex-Civil Services Officer</div>
                   </div>
                 </div>

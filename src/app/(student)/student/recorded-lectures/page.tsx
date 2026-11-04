@@ -25,7 +25,7 @@ function getGradient(subject: string) {
 const SUBJECTS = ['All', 'History', 'Geography', 'Polity', 'Economy', 'Science', 'Environment'];
 
 const EXTRA_LECTURES = [
-  { id: '5', title: 'Modern History: Independence Movement', instructor: 'Dr. Himanshu Sharma', duration: '2h 30m', views: 6100, subject: 'History', date: '2026-10-08' },
+  { id: '5', title: 'Modern History: Independence Movement', instructor: 'Dr. Himanshu Rai', duration: '2h 30m', views: 6100, subject: 'History', date: '2026-10-08' },
   { id: '6', title: 'Monsoon System in India', instructor: 'Dr. Priya Anand', duration: '1h 20m', views: 2900, subject: 'Geography', date: '2026-10-05' },
   { id: '7', title: 'Directive Principles of State Policy', instructor: 'Rajesh Kumar Singh', duration: '1h 50m', views: 4300, subject: 'Polity', date: '2026-10-01' },
   { id: '8', title: 'RBI Functions & Monetary Policy', instructor: 'Meera Verma', duration: '1h 40m', views: 3200, subject: 'Economy', date: '2026-09-25' },

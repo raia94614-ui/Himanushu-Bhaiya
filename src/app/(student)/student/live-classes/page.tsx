@@ -25,15 +25,15 @@ function getGradient(title: string): string {
 }
 
 const weekSchedule = [
-  { day: 'Monday', subject: 'History', instructor: 'Dr. Himanshu Sharma', time: '9:00 AM', room: 'Hall 1' },
+  { day: 'Monday', subject: 'History', instructor: 'Dr. Himanshu Rai', time: '9:00 AM', room: 'Hall 1' },
   { day: 'Monday', subject: 'Economy', instructor: 'Meera Verma', time: '2:00 PM', room: 'Hall 3' },
   { day: 'Tuesday', subject: 'Geography', instructor: 'Dr. Priya Anand', time: '9:00 AM', room: 'Hall 2' },
   { day: 'Tuesday', subject: 'Polity', instructor: 'Rajesh Kumar Singh', time: '11:00 AM', room: 'Hall 1' },
-  { day: 'Wednesday', subject: 'History', instructor: 'Dr. Himanshu Sharma', time: '9:00 AM', room: 'Hall 1' },
+  { day: 'Wednesday', subject: 'History', instructor: 'Dr. Himanshu Rai', time: '9:00 AM', room: 'Hall 1' },
   { day: 'Wednesday', subject: 'Current Affairs', instructor: 'Dr. Kavita Rao', time: '4:00 PM', room: 'Online' },
   { day: 'Thursday', subject: 'CSAT', instructor: 'Ankit Malhotra', time: '10:00 AM', room: 'Hall 2' },
   { day: 'Friday', subject: 'Geography', instructor: 'Dr. Priya Anand', time: '9:00 AM', room: 'Hall 2' },
-  { day: 'Saturday', subject: 'Essay Writing', instructor: 'Dr. Himanshu Sharma', time: '10:00 AM', room: 'Hall 1' },
+  { day: 'Saturday', subject: 'Essay Writing', instructor: 'Dr. Himanshu Rai', time: '10:00 AM', room: 'Hall 1' },
 ];
 
 export default function LiveClassesPage() {

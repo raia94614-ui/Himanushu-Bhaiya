@@ -18,7 +18,7 @@ const subjectColors: Record<string, string> = {
 
 const completedCourses = [
   {
-    id: 'c1', title: 'Prelims Foundation — 2023', instructor: 'Dr. Himanshu Sharma',
+    id: 'c1', title: 'Prelims Foundation — 2023', instructor: 'Dr. Himanshu Rai',
     progress: 100, totalLessons: 120, completedLessons: 120, lastAccessed: '6 months ago',
     tags: ['History', 'Polity', 'Geography'], color: '#065f46'
   },
