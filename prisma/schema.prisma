@@ -1,0 +1,355 @@
+// Prisma Schema for Himanshu Classes - Secure Coaching Management Platform
+// Database: PostgreSQL
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Enums ────────────────────────────────────────────────────────────────────
+
+enum Role {
+  SUPER_ADMIN
+  ADMIN
+  TEACHER
+  STUDENT
+}
+
+enum EnrollmentStatus {
+  PENDING
+  ACTIVE
+  COMPLETED
+  CANCELLED
+}
+
+enum AdmissionStatus {
+  NEW
+  CONTACTED
+  ENROLLED
+  REJECTED
+  CLOSED
+}
+
+enum MaterialType {
+  PDF
+  VIDEO
+  IMAGE
+  DOCUMENT
+  LINK
+  OTHER
+}
+
+enum AuditAction {
+  LOGIN_SUCCESS
+  LOGIN_FAILED
+  LOGOUT
+  OTP_SENT
+  OTP_VERIFIED
+  OTP_FAILED
+  OTP_EXPIRED
+  PASSWORD_RESET_REQUEST
+  PASSWORD_RESET_SUCCESS
+  TOTP_ENROLLED
+  TOTP_VERIFIED
+  TOTP_FAILED
+  RECOVERY_CODE_USED
+  SESSION_CREATED
+  SESSION_REVOKED
+  SESSION_EXPIRED
+  ROLE_CHANGED
+  USER_CREATED
+  USER_DISABLED
+  USER_DELETED
+  STUDENT_ENROLLED
+  STUDENT_UNENROLLED
+  MATERIAL_UPLOADED
+  MATERIAL_DELETED
+  ADMIN_ACTION
+  PRIVILEGE_ESCALATION_ATTEMPT
+  SUSPICIOUS_ACTIVITY
+}
+
+// ─── Core Auth Models ─────────────────────────────────────────────────────────
+
+model User {
+  id                    String    @id @default(cuid())
+  email                 String?   @unique
+  phone                 String?   @unique
+  passwordHash          String?
+  role                  Role      @default(STUDENT)
+  isActive              Boolean   @default(true)
+  emailVerified         Boolean   @default(false)
+  emailVerifiedAt       DateTime?
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+  lastLoginAt           DateTime?
+  createdById           String?
+
+  // Relations
+  sessions              Session[]
+  otpVerifications      OTPVerification[]
+  twoFactorAuth         TwoFactorAuthentication?
+  recoveryCodes         RecoveryCode[]
+  studentProfile        StudentProfile?
+  teacherProfile        TeacherProfile?
+  auditLogsAsActor      AuditLog[]               @relation("AuditActor")
+  auditLogsAsTarget     AuditLog[]               @relation("AuditTarget")
+  createdBy             User?                    @relation("CreatedBy", fields: [createdById], references: [id])
+  createdUsers          User[]                   @relation("CreatedBy")
+  enrollments           Enrollment[]
+  uploadedMaterials     StudyMaterial[]
+
+  @@index([email])
+  @@index([phone])
+  @@index([role])
+  @@index([isActive])
+}
+
+model Session {
+  id           String    @id @default(cuid())
+  userId       String
+  token        String    @unique
+  ipAddress    String?
+  userAgent    String?
+  expiresAt    DateTime
+  lastActiveAt DateTime  @default(now())
+  createdAt    DateTime  @default(now())
+  revokedAt    DateTime?
+  isRevoked    Boolean   @default(false)
+
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([token])
+  @@index([expiresAt])
+}
+
+model OTPVerification {
+  id            String    @id @default(cuid())
+  userId        String
+  otpHash       String    // Hashed OTP — never store plaintext
+  purpose       String    // "login", "phone-verify", "password-reset"
+  attempts      Int       @default(0)
+  maxAttempts   Int       @default(5)
+  expiresAt     DateTime
+  usedAt        DateTime?
+  isUsed        Boolean   @default(false)
+  createdAt     DateTime  @default(now())
+
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+model TwoFactorAuthentication {
+  id              String    @id @default(cuid())
+  userId          String    @unique
+  totpSecretEnc   String    // AES-256-GCM encrypted TOTP secret
+  isEnabled       Boolean   @default(false)
+  enrolledAt      DateTime?
+  lastVerifiedAt  DateTime?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model RecoveryCode {
+  id          String    @id @default(cuid())
+  userId      String
+  codeHash    String    // Argon2id hashed recovery code
+  isUsed      Boolean   @default(false)
+  usedAt      DateTime?
+  createdAt   DateTime  @default(now())
+
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+// ─── Profiles ─────────────────────────────────────────────────────────────────
+
+model StudentProfile {
+  id              String    @id @default(cuid())
+  userId          String    @unique
+  firstName       String
+  lastName        String
+  dateOfBirth     DateTime?
+  address         String?
+  parentName      String?
+  parentPhone     String?
+  avatarUrl       String?
+  studentId       String    @unique @default(cuid())
+  joinedAt        DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  enrollments     Enrollment[]
+
+  @@index([userId])
+  @@index([studentId])
+}
+
+model TeacherProfile {
+  id              String    @id @default(cuid())
+  userId          String    @unique
+  firstName       String
+  lastName        String
+  qualification   String?
+  specialization  String?
+  bio             String?
+  avatarUrl       String?
+  employeeId      String    @unique @default(cuid())
+  joinedAt        DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  courses         CourseTeacher[]
+
+  @@index([userId])
+}
+
+// ─── Academic Models ──────────────────────────────────────────────────────────
+
+model Course {
+  id              String    @id @default(cuid())
+  slug            String    @unique
+  title           String
+  description     String?
+  shortDesc       String?
+  thumbnail       String?
+  duration        String?
+  fees            Decimal?  @db.Decimal(10, 2)
+  isPublished     Boolean   @default(false)
+  isActive        Boolean   @default(true)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  teachers        CourseTeacher[]
+  enrollments     Enrollment[]
+  materials       StudyMaterial[]
+  announcements   Announcement[]
+
+  @@index([slug])
+  @@index([isPublished])
+}
+
+model CourseTeacher {
+  id          String    @id @default(cuid())
+  courseId    String
+  teacherId   String
+  assignedAt  DateTime  @default(now())
+
+  course      Course        @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  teacher     TeacherProfile @relation(fields: [teacherId], references: [id], onDelete: Cascade)
+
+  @@unique([courseId, teacherId])
+  @@index([courseId])
+  @@index([teacherId])
+}
+
+model Enrollment {
+  id              String           @id @default(cuid())
+  userId          String
+  courseId        String
+  studentProfileId String
+  status          EnrollmentStatus @default(ACTIVE)
+  enrolledAt      DateTime         @default(now())
+  completedAt     DateTime?
+  progress        Int              @default(0) // 0-100 percentage
+  notes           String?
+
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  course          Course         @relation(fields: [courseId], references: [id])
+  studentProfile  StudentProfile @relation(fields: [studentProfileId], references: [id])
+
+  @@unique([userId, courseId])
+  @@index([userId])
+  @@index([courseId])
+  @@index([status])
+}
+
+model StudyMaterial {
+  id              String       @id @default(cuid())
+  courseId        String
+  uploadedById    String
+  title           String
+  description     String?
+  type            MaterialType
+  fileUrl         String?
+  externalUrl     String?
+  fileSize        BigInt?
+  mimeType        String?
+  isPublic        Boolean      @default(false) // false = private to enrolled students
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  course          Course       @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  uploadedBy      User         @relation(fields: [uploadedById], references: [id])
+
+  @@index([courseId])
+  @@index([uploadedById])
+}
+
+model Announcement {
+  id          String    @id @default(cuid())
+  courseId    String?   // null = global announcement
+  title       String
+  content     String
+  isActive    Boolean   @default(true)
+  publishedAt DateTime  @default(now())
+  expiresAt   DateTime?
+  createdAt   DateTime  @default(now())
+
+  course      Course?   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+
+  @@index([courseId])
+  @@index([publishedAt])
+}
+
+// ─── CRM ──────────────────────────────────────────────────────────────────────
+
+model AdmissionEnquiry {
+  id              String          @id @default(cuid())
+  name            String
+  email           String?
+  phone           String
+  courseInterest  String?
+  message         String?
+  status          AdmissionStatus @default(NEW)
+  notes           String?
+  handledById     String?
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  @@index([status])
+  @@index([createdAt])
+}
+
+// ─── Audit ────────────────────────────────────────────────────────────────────
+
+model AuditLog {
+  id          String      @id @default(cuid())
+  actorId     String?     // user performing the action (null = anonymous)
+  targetId    String?     // user being acted upon
+  action      AuditAction
+  resource    String?     // e.g., "course:abc123", "session:xyz"
+  metadata    Json?       // additional context (never passwords/secrets)
+  ipAddress   String?
+  userAgent   String?
+  success     Boolean     @default(true)
+  createdAt   DateTime    @default(now())
+
+  actor       User?       @relation("AuditActor", fields: [actorId], references: [id], onDelete: SetNull)
+  target      User?       @relation("AuditTarget", fields: [targetId], references: [id], onDelete: SetNull)
+
+  @@index([actorId])
+  @@index([targetId])
+  @@index([action])
+  @@index([createdAt])
+}
