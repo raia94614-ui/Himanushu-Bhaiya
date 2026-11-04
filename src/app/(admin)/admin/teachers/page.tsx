@@ -5,7 +5,7 @@ import DashboardLayout from '@/components/layout/DashboardLayout';
 import { FACULTY } from '@/lib/mock-data';
 import {
   LayoutGrid, List, PlusCircle, X, Pencil, Eye, Mail, Phone, BookOpen, Users,
-  ChevronUp, ChevronDown, Toggle,
+  ChevronUp, ChevronDown, ToggleLeft,
 } from 'lucide-react';
 
 type ViewMode = 'cards' | 'table';
@@ -258,7 +258,7 @@ export default function AdminTeachersPage() {
                               className={`p-1.5 rounded-lg transition ${isActive ? 'text-red-500 hover:bg-red-50' : 'text-green-500 hover:bg-green-50'}`}
                               title={isActive ? 'Deactivate' : 'Activate'}
                             >
-                              <Toggle className="w-4 h-4" />
+                              <ToggleLeft className="w-4 h-4" />
                             </button>
                           </div>
                         </td>
