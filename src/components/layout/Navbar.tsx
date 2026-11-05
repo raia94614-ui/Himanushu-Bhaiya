@@ -11,7 +11,9 @@ import {
   ChevronDown, 
   GraduationCap, 
   Sparkles,
-  ArrowRight
+  ArrowRight,
+  MapPin,
+  Clock
 } from 'lucide-react';
 import { INSTITUTE_INFO, COURSES_DATA } from '@/lib/website-data';
 
@@ -52,130 +54,91 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
     }
   };
 
+  // Ticker content items for the infinite smooth marquee
+  const tickerItems = [
+    { icon: Phone, text: INSTITUTE_INFO.phone, isLink: true, href: `tel:${INSTITUTE_INFO.phone}` },
+    { icon: Mail, text: INSTITUTE_INFO.email, isLink: true, href: `mailto:${INSTITUTE_INFO.email}` },
+    { icon: Sparkles, text: 'UPSC & HPAS 2025-26 Foundation Batch Admissions Open' },
+    { icon: Clock, text: 'Morning & Evening Batches • Hybrid Mode Available' },
+    { icon: MapPin, text: INSTITUTE_INFO.address },
+    { icon: Sparkles, text: 'Flat 15% Early Bird Scholarship for Merit Students' },
+  ];
+
   return (
     <div style={{ position: 'sticky', top: 0, zIndex: 100 }}>
-      {/* ── TOP NOTIFICATION & CONTACT BAR ── */}
+      {/* ── TOP CONTINUOUS MOVING TICKER / RUNNING MARQUEE ── */}
       <div 
         style={{
-          background: 'linear-gradient(90deg, #0A192F 0%, #0F2A4A 100%)',
+          background: 'linear-gradient(90deg, #07111E 0%, #0B1D33 50%, #07111E 100%)',
           color: '#E2E8F0',
           fontSize: '0.8125rem',
-          borderBottom: '1px solid rgba(255,255,255,0.08)',
-          paddingTop: '8px',
-          paddingBottom: '8px'
+          borderBottom: '1px solid rgba(245, 158, 11, 0.25)',
+          overflow: 'hidden',
+          whiteSpace: 'nowrap',
+          height: '36px',
+          display: 'flex',
+          alignItems: 'center',
+          position: 'relative'
         }}
       >
-        <div 
-          className="hc-container"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            flexWrap: 'wrap',
-            gap: '12px'
-          }}
-        >
-          {/* Contact Details with smooth hover transition & pill effect */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
-            <a 
-              href={`tel:${INSTITUTE_INFO.phone}`} 
-              className="hc-topbar-link"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                padding: '4px 12px',
-                borderRadius: '9999px',
-                backgroundColor: 'rgba(255, 255, 255, 0.06)',
-                border: '1px solid rgba(255, 255, 255, 0.12)',
-                color: '#F1F5F9',
-                textDecoration: 'none',
-                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                cursor: 'pointer'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgba(245, 158, 11, 0.2)';
-                e.currentTarget.style.borderColor = '#F59E0B';
-                e.currentTarget.style.color = '#FDE68A';
-                e.currentTarget.style.transform = 'translateY(-1px)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.06)';
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.12)';
-                e.currentTarget.style.color = '#F1F5F9';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }}
-            >
-              <Phone size={13} style={{ color: '#F59E0B', transition: 'transform 0.3s' }} />
-              <span style={{ fontWeight: 600, letterSpacing: '0.02em' }}>{INSTITUTE_INFO.phone}</span>
-            </a>
-
-            <a 
-              href={`mailto:${INSTITUTE_INFO.email}`} 
-              className="hc-topbar-link"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                padding: '4px 12px',
-                borderRadius: '9999px',
-                backgroundColor: 'rgba(255, 255, 255, 0.06)',
-                border: '1px solid rgba(255, 255, 255, 0.12)',
-                color: '#F1F5F9',
-                textDecoration: 'none',
-                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                cursor: 'pointer'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgba(245, 158, 11, 0.2)';
-                e.currentTarget.style.borderColor = '#F59E0B';
-                e.currentTarget.style.color = '#FDE68A';
-                e.currentTarget.style.transform = 'translateY(-1px)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.06)';
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.12)';
-                e.currentTarget.style.color = '#F1F5F9';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }}
-            >
-              <Mail size={13} style={{ color: '#F59E0B', transition: 'transform 0.3s' }} />
-              <span style={{ fontWeight: 600, letterSpacing: '0.02em' }}>{INSTITUTE_INFO.email}</span>
-            </a>
-          </div>
-
-          {/* Announcement Ticker */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#F8FAFC' }}>
-            <span 
-              style={{
-                backgroundColor: 'rgba(245, 158, 11, 0.2)',
-                color: '#F59E0B',
-                padding: '3px 10px',
-                borderRadius: '9999px',
-                fontWeight: 700,
-                fontSize: '0.75rem',
-                border: '1px solid rgba(245, 158, 11, 0.4)',
-                letterSpacing: '0.04em',
-                textTransform: 'uppercase'
-              }}
-            >
-              New Batch
-            </span>
-            <span style={{ fontSize: '0.8125rem', color: '#E2E8F0' }}>
-              UPSC & HPAS 2025-26 Foundation Batch Admissions Open • 15% Early Bird Scholarship
-            </span>
-          </div>
+        <div className="hc-marquee-track">
+          {/* Repeating array twice for continuous seamless loop */}
+          {[...tickerItems, ...tickerItems].map((item, idx) => {
+            const Icon = item.icon;
+            if (item.isLink) {
+              return (
+                <a
+                  key={idx}
+                  href={item.href}
+                  className="hc-ticker-item"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '7px',
+                    marginRight: '36px',
+                    color: '#F1F5F9',
+                    textDecoration: 'none',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    transition: 'color 0.2s ease'
+                  }}
+                >
+                  <Icon size={13} style={{ color: '#F59E0B', flexShrink: 0 }} />
+                  <span>{item.text}</span>
+                  <span style={{ color: 'rgba(245, 158, 11, 0.5)', marginLeft: '18px' }}>•</span>
+                </a>
+              );
+            }
+            return (
+              <span
+                key={idx}
+                className="hc-ticker-item"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '7px',
+                  marginRight: '36px',
+                  color: '#CBD5E1',
+                  fontWeight: 500
+                }}
+              >
+                <Icon size={13} style={{ color: '#F59E0B', flexShrink: 0 }} />
+                <span>{item.text}</span>
+                <span style={{ color: 'rgba(245, 158, 11, 0.5)', marginLeft: '18px' }}>•</span>
+              </span>
+            );
+          })}
         </div>
       </div>
 
-      {/* ── MAIN NAVIGATION BAR (PREMIUM SLATE NAVY LOOK) ── */}
+      {/* ── MAIN NAVIGATION BAR (CLEAN SLATE WITH PERFECT LINEAR ALIGNMENT) ── */}
       <header
         style={{
           background: 'linear-gradient(180deg, #0A192F 0%, #0D223E 100%)',
-          borderBottom: '2px solid rgba(245, 158, 11, 0.3)',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
           boxShadow: scrolled 
-            ? '0 12px 30px -5px rgba(0, 0, 0, 0.35)' 
-            : '0 4px 16px rgba(0, 0, 0, 0.2)',
+            ? '0 12px 30px -5px rgba(0, 0, 0, 0.45)' 
+            : '0 4px 16px rgba(0, 0, 0, 0.25)',
           transition: 'all 0.25s ease'
         }}
       >
@@ -185,7 +148,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            height: '76px'
+            height: '72px'
           }}
         >
           {/* 1. LEFT: LOGO & INSTITUTE BRANDING */}
@@ -195,33 +158,34 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
               display: 'flex', 
               alignItems: 'center', 
               gap: '12px',
-              textDecoration: 'none'
+              textDecoration: 'none',
+              flexShrink: 0
             }}
           >
             {/* Emblem Crest */}
             <div 
               style={{
-                width: '46px',
-                height: '46px',
-                borderRadius: '12px',
+                width: '44px',
+                height: '44px',
+                borderRadius: '10px',
                 backgroundColor: '#0F2A4A',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: '#F59E0B',
-                border: '2px solid #F59E0B',
-                boxShadow: '0 4px 14px rgba(245, 158, 11, 0.25)',
+                border: '1.5px solid #F59E0B',
+                boxShadow: '0 4px 12px rgba(245, 158, 11, 0.25)',
                 flexShrink: 0
               }}
             >
-              <GraduationCap size={26} strokeWidth={2.2} />
+              <GraduationCap size={24} strokeWidth={2.2} />
             </div>
 
             {/* Name & Tagline */}
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <span 
                 style={{
-                  fontSize: '1.3125rem',
+                  fontSize: '1.25rem',
                   fontWeight: 800,
                   color: '#FFFFFF',
                   letterSpacing: '-0.02em',
@@ -245,7 +209,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             </div>
           </Link>
 
-          {/* 2. CENTER: NAVIGATION LINKS (Desktop) - Perfectly Aligned */}
+          {/* 2. CENTER: NAVIGATION LINKS (Single Baseline, Pure Bottom-Line Indicator) */}
           <nav 
             style={{
               display: 'flex',
@@ -271,26 +235,25 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                         display: 'inline-flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        gap: '4px',
+                        gap: '5px',
                         height: '40px',
-                        padding: '0 14px',
-                        borderRadius: '8px',
+                        padding: '0 12px',
+                        borderRadius: '6px',
                         fontSize: '0.9375rem',
-                        fontWeight: 600,
-                        lineHeight: 1,
+                        fontWeight: isActive ? 700 : 500,
                         color: isActive ? '#F59E0B' : '#E2E8F0',
-                        backgroundColor: isActive ? 'rgba(245, 158, 11, 0.15)' : 'transparent',
-                        border: isActive ? '1px solid rgba(245, 158, 11, 0.3)' : '1px solid transparent',
-                        transition: 'all 0.2s ease',
-                        textDecoration: 'none'
+                        borderBottom: isActive ? '2px solid #F59E0B' : '2px solid transparent',
+                        transition: 'all 0.15s ease',
+                        textDecoration: 'none',
+                        whiteSpace: 'nowrap'
                       }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.color = '#F59E0B';
-                        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.08)';
+                        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.color = isActive ? '#F59E0B' : '#E2E8F0';
-                        e.currentTarget.style.backgroundColor = isActive ? 'rgba(245, 158, 11, 0.15)' : 'transparent';
+                        e.currentTarget.style.backgroundColor = 'transparent';
                       }}
                     >
                       <span>{item.label}</span>
@@ -307,8 +270,8 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                           transform: 'translateX(-50%)',
                           width: '420px',
                           backgroundColor: '#0F2A4A',
-                          borderRadius: '14px',
-                          boxShadow: '0 20px 40px rgba(0, 0, 0, 0.4)',
+                          borderRadius: '12px',
+                          boxShadow: '0 20px 40px rgba(0, 0, 0, 0.5)',
                           border: '1px solid rgba(245, 158, 11, 0.3)',
                           padding: '12px',
                           marginTop: '6px',
@@ -386,24 +349,23 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                     alignItems: 'center',
                     justifyContent: 'center',
                     height: '40px',
-                    padding: '0 14px',
-                    borderRadius: '8px',
+                    padding: '0 12px',
+                    borderRadius: '6px',
                     fontSize: '0.9375rem',
-                    fontWeight: 600,
-                    lineHeight: 1,
+                    fontWeight: isActive ? 700 : 500,
                     color: isActive ? '#F59E0B' : '#E2E8F0',
-                    backgroundColor: isActive ? 'rgba(245, 158, 11, 0.15)' : 'transparent',
-                    border: isActive ? '1px solid rgba(245, 158, 11, 0.3)' : '1px solid transparent',
-                    transition: 'all 0.2s ease',
-                    textDecoration: 'none'
+                    borderBottom: isActive ? '2px solid #F59E0B' : '2px solid transparent',
+                    transition: 'all 0.15s ease',
+                    textDecoration: 'none',
+                    whiteSpace: 'nowrap'
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.color = '#F59E0B';
-                    e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.08)';
+                    e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.color = isActive ? '#F59E0B' : '#E2E8F0';
-                    e.currentTarget.style.backgroundColor = isActive ? 'rgba(245, 158, 11, 0.15)' : 'transparent';
+                    e.currentTarget.style.backgroundColor = 'transparent';
                   }}
                 >
                   {item.label}
@@ -417,7 +379,8 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '12px'
+              gap: '10px',
+              flexShrink: 0
             }}
             className="hc-desktop-actions"
           >
@@ -427,17 +390,18 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '8px',
-                height: '42px',
-                padding: '0 18px',
+                gap: '6px',
+                height: '38px',
+                padding: '0 15px',
                 borderRadius: '8px',
                 fontSize: '0.875rem',
-                fontWeight: 700,
+                fontWeight: 600,
                 color: '#FFFFFF',
                 backgroundColor: 'rgba(255, 255, 255, 0.08)',
                 border: '1px solid rgba(255, 255, 255, 0.2)',
                 transition: 'all 0.2s ease',
-                textDecoration: 'none'
+                textDecoration: 'none',
+                whiteSpace: 'nowrap'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = '#FFFFFF';
@@ -448,7 +412,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                 e.currentTarget.style.color = '#FFFFFF';
               }}
             >
-              <Phone size={15} />
+              <Phone size={14} />
               <span>Call Now</span>
             </a>
 
@@ -458,9 +422,9 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '8px',
-                height: '42px',
-                padding: '0 20px',
+                gap: '7px',
+                height: '38px',
+                padding: '0 18px',
                 borderRadius: '8px',
                 fontSize: '0.875rem',
                 fontWeight: 700,
@@ -469,18 +433,19 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                 boxShadow: '0 4px 14px rgba(29, 78, 216, 0.4)',
                 border: 'none',
                 cursor: 'pointer',
-                transition: 'all 0.2s ease'
+                transition: 'all 0.2s ease',
+                whiteSpace: 'nowrap'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 6px 20px rgba(29, 78, 216, 0.6)';
+                e.currentTarget.style.transform = 'translateY(-1px)';
+                e.currentTarget.style.boxShadow = '0 6px 18px rgba(29, 78, 216, 0.6)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
                 e.currentTarget.style.boxShadow = '0 4px 14px rgba(29, 78, 216, 0.4)';
               }}
             >
-              <Sparkles size={15} style={{ color: '#FDE68A' }} />
+              <Sparkles size={14} style={{ color: '#FDE68A' }} />
               <span>Student Enquiry</span>
             </button>
           </div>
@@ -489,7 +454,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             style={{
-              padding: '10px',
+              padding: '8px',
               borderRadius: '8px',
               color: '#FFFFFF',
               backgroundColor: 'rgba(255, 255, 255, 0.08)',
@@ -500,7 +465,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             className="hc-mobile-toggle"
             aria-label="Toggle navigation menu"
           >
-            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </header>
@@ -511,7 +476,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
           style={{
             position: 'fixed',
             inset: 0,
-            top: '116px',
+            top: '108px',
             backgroundColor: 'rgba(10, 25, 47, 0.8)',
             backdropFilter: 'blur(6px)',
             zIndex: 99
@@ -522,7 +487,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             style={{
               backgroundColor: '#0A192F',
               width: '100%',
-              maxHeight: 'calc(100vh - 116px)',
+              maxHeight: 'calc(100vh - 108px)',
               overflowY: 'auto',
               padding: '24px 20px',
               borderBottom: '2px solid #F59E0B',
@@ -604,8 +569,28 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
         </div>
       )}
 
-      {/* Media queries to show/hide mobile vs desktop nav */}
+      {/* Infinite Marquee Animation & Responsive Styles */}
       <style jsx>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        .hc-marquee-track {
+          display: inline-flex;
+          align-items: center;
+          white-space: nowrap;
+          animation: marquee 25s linear infinite;
+        }
+        .hc-marquee-track:hover {
+          animation-play-state: paused;
+        }
+        .hc-ticker-item:hover span {
+          color: #F59E0B !important;
+        }
         @media (max-width: 1080px) {
           :global(.hc-desktop-nav) {
             display: none !important;
