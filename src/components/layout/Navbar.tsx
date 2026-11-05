@@ -247,7 +247,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                         fontSize: '0.875rem',
                         fontWeight: isActive ? 700 : 500,
                         color: isActive ? '#F59E0B' : '#E2E8F0',
-                        borderBottom: isActive ? '2px solid #F59E0B' : '2px solid transparent',
+                        
                         transition: 'all 0.15s ease',
                         textDecoration: 'none',
                         whiteSpace: 'nowrap'
@@ -359,7 +359,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                     fontSize: '0.875rem',
                     fontWeight: isActive ? 700 : 500,
                     color: isActive ? '#F59E0B' : '#E2E8F0',
-                    borderBottom: isActive ? '2px solid #F59E0B' : '2px solid transparent',
+                    
                     transition: 'all 0.15s ease',
                     textDecoration: 'none',
                     whiteSpace: 'nowrap'
