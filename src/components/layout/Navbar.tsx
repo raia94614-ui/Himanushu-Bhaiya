@@ -131,7 +131,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
         </div>
       </div>
 
-      {/* ── MAIN NAVIGATION BAR (CLEAN SLATE WITH PERFECT LINEAR ALIGNMENT) ── */}
+      {/* ── MAIN NAVIGATION BAR (PROPORTIONAL 100% CONTAINER WITH NO OVERFLOW) ── */}
       <header
         style={{
           background: 'linear-gradient(180deg, #0A192F 0%, #0D223E 100%)',
@@ -143,12 +143,15 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
         }}
       >
         <div 
-          className="hc-container"
           style={{
+            maxWidth: '100%',
+            paddingLeft: '20px',
+            paddingRight: '20px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            height: '72px'
+            height: '68px',
+            gap: '12px'
           }}
         >
           {/* 1. LEFT: LOGO & INSTITUTE BRANDING */}
@@ -157,7 +160,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             style={{ 
               display: 'flex', 
               alignItems: 'center', 
-              gap: '12px',
+              gap: '10px',
               textDecoration: 'none',
               flexShrink: 0
             }}
@@ -165,8 +168,8 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             {/* Emblem Crest */}
             <div 
               style={{
-                width: '44px',
-                height: '44px',
+                width: '42px',
+                height: '42px',
                 borderRadius: '10px',
                 backgroundColor: '#0F2A4A',
                 display: 'flex',
@@ -178,44 +181,45 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                 flexShrink: 0
               }}
             >
-              <GraduationCap size={24} strokeWidth={2.2} />
+              <GraduationCap size={23} strokeWidth={2.2} />
             </div>
 
             {/* Name & Tagline */}
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <span 
                 style={{
-                  fontSize: '1.25rem',
+                  fontSize: '1.1875rem',
                   fontWeight: 800,
                   color: '#FFFFFF',
                   letterSpacing: '-0.02em',
-                  lineHeight: 1.15
+                  lineHeight: 1.15,
+                  whiteSpace: 'nowrap'
                 }}
               >
                 {INSTITUTE_INFO.name}
               </span>
               <span 
                 style={{
-                  fontSize: '0.6875rem',
+                  fontSize: '0.625rem',
                   fontWeight: 700,
                   color: '#F59E0B',
                   textTransform: 'uppercase',
-                  letterSpacing: '0.06em',
-                  marginTop: '2px'
+                  letterSpacing: '0.05em',
+                  marginTop: '2px',
+                  whiteSpace: 'nowrap'
                 }}
               >
-                Premier Coaching Institute • Estd. {INSTITUTE_INFO.established}
+                Premier Coaching • Estd. {INSTITUTE_INFO.established}
               </span>
             </div>
           </Link>
 
-          {/* 2. CENTER: NAVIGATION LINKS (Single Baseline, Pure Bottom-Line Indicator) */}
+          {/* 2. CENTER: NAVIGATION LINKS (Compact and evenly spaced) */}
           <nav 
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '6px',
-              marginLeft: '24px'
+              gap: '2px'
             }}
             className="hc-desktop-nav"
           >
@@ -236,11 +240,11 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                         display: 'inline-flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        gap: '5px',
-                        height: '40px',
-                        padding: '0 12px',
+                        gap: '3px',
+                        height: '38px',
+                        padding: '0 10px',
                         borderRadius: '6px',
-                        fontSize: '0.9375rem',
+                        fontSize: '0.875rem',
                         fontWeight: isActive ? 700 : 500,
                         color: isActive ? '#F59E0B' : '#E2E8F0',
                         borderBottom: isActive ? '2px solid #F59E0B' : '2px solid transparent',
@@ -258,7 +262,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                       }}
                     >
                       <span>{item.label}</span>
-                      <ChevronDown size={14} style={{ transition: 'transform 0.2s', transform: coursesDropdown ? 'rotate(180deg)' : 'none' }} />
+                      <ChevronDown size={13} style={{ transition: 'transform 0.2s', transform: coursesDropdown ? 'rotate(180deg)' : 'none' }} />
                     </Link>
 
                     {/* Courses Dropdown Menu */}
@@ -269,7 +273,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                           top: '100%',
                           left: '50%',
                           transform: 'translateX(-50%)',
-                          width: '420px',
+                          width: '400px',
                           backgroundColor: '#0F2A4A',
                           borderRadius: '12px',
                           boxShadow: '0 20px 40px rgba(0, 0, 0, 0.5)',
@@ -294,7 +298,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                               display: 'flex',
                               alignItems: 'center',
                               justifyContent: 'space-between',
-                              padding: '10px',
+                              padding: '8px 10px',
                               borderRadius: '8px',
                               transition: 'background 0.15s ease',
                               textDecoration: 'none'
@@ -303,14 +307,14 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                             onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
                           >
                             <div>
-                              <div style={{ fontSize: '0.875rem', fontWeight: 700, color: '#FFFFFF' }}>
+                              <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: '#FFFFFF' }}>
                                 {course.title.split('(')[0]}
                               </div>
                               <div style={{ fontSize: '0.75rem', color: '#94A3B8' }}>
                                 {course.duration} • {course.fee}
                               </div>
                             </div>
-                            <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#F59E0B', backgroundColor: 'rgba(245, 158, 11, 0.15)', padding: '3px 8px', borderRadius: '4px' }}>
+                            <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#F59E0B', backgroundColor: 'rgba(245, 158, 11, 0.15)', padding: '2px 8px', borderRadius: '4px' }}>
                               View
                             </span>
                           </Link>
@@ -319,8 +323,8 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                           href="/courses"
                           onClick={() => setCoursesDropdown(false)}
                           style={{
-                            marginTop: '6px',
-                            padding: '10px',
+                            marginTop: '4px',
+                            padding: '8px',
                             borderRadius: '8px',
                             backgroundColor: 'rgba(255, 255, 255, 0.05)',
                             color: '#F59E0B',
@@ -349,10 +353,10 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                     display: 'inline-flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    height: '40px',
-                    padding: '0 12px',
+                    height: '38px',
+                    padding: '0 10px',
                     borderRadius: '6px',
-                    fontSize: '0.9375rem',
+                    fontSize: '0.875rem',
                     fontWeight: isActive ? 700 : 500,
                     color: isActive ? '#F59E0B' : '#E2E8F0',
                     borderBottom: isActive ? '2px solid #F59E0B' : '2px solid transparent',
@@ -375,12 +379,12 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             })}
           </nav>
 
-          {/* 3. RIGHT: CTA ACTION BUTTONS (Desktop) */}
+          {/* 3. RIGHT: CTA ACTION BUTTONS (Compact to prevent edge clipping) */}
           <div 
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '10px',
+              gap: '8px',
               flexShrink: 0
             }}
             className="hc-desktop-actions"
@@ -391,11 +395,11 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '6px',
-                height: '38px',
-                padding: '0 15px',
+                gap: '5px',
+                height: '36px',
+                padding: '0 12px',
                 borderRadius: '8px',
-                fontSize: '0.875rem',
+                fontSize: '0.8125rem',
                 fontWeight: 600,
                 color: '#FFFFFF',
                 backgroundColor: 'rgba(255, 255, 255, 0.08)',
@@ -413,7 +417,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                 e.currentTarget.style.color = '#FFFFFF';
               }}
             >
-              <Phone size={14} />
+              <Phone size={13} />
               <span>Call Now</span>
             </a>
 
@@ -423,15 +427,15 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '7px',
-                height: '38px',
-                padding: '0 18px',
+                gap: '6px',
+                height: '36px',
+                padding: '0 15px',
                 borderRadius: '8px',
-                fontSize: '0.875rem',
+                fontSize: '0.8125rem',
                 fontWeight: 700,
                 color: '#FFFFFF',
                 background: 'linear-gradient(135deg, #1D4ED8 0%, #2563EB 100%)',
-                boxShadow: '0 4px 14px rgba(29, 78, 216, 0.4)',
+                boxShadow: '0 4px 12px rgba(29, 78, 216, 0.4)',
                 border: 'none',
                 cursor: 'pointer',
                 transition: 'all 0.2s ease',
@@ -439,14 +443,14 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-1px)';
-                e.currentTarget.style.boxShadow = '0 6px 18px rgba(29, 78, 216, 0.6)';
+                e.currentTarget.style.boxShadow = '0 6px 16px rgba(29, 78, 216, 0.6)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 4px 14px rgba(29, 78, 216, 0.4)';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(29, 78, 216, 0.4)';
               }}
             >
-              <Sparkles size={14} style={{ color: '#FDE68A' }} />
+              <Sparkles size={13} style={{ color: '#FDE68A' }} />
               <span>Student Enquiry</span>
             </button>
           </div>
@@ -477,7 +481,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
           style={{
             position: 'fixed',
             inset: 0,
-            top: '108px',
+            top: '104px',
             backgroundColor: 'rgba(10, 25, 47, 0.8)',
             backdropFilter: 'blur(6px)',
             zIndex: 99
@@ -488,7 +492,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             style={{
               backgroundColor: '#0A192F',
               width: '100%',
-              maxHeight: 'calc(100vh - 108px)',
+              maxHeight: 'calc(100vh - 104px)',
               overflowY: 'auto',
               padding: '24px 20px',
               borderBottom: '2px solid #F59E0B',
@@ -570,7 +574,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
         </div>
       )}
 
-      {/* Infinite Marquee Animation & Responsive Styles */}
+      {/* Infinite Marquee Animation & Responsive Breakpoints */}
       <style jsx>{`
         @keyframes marquee {
           0% {
@@ -592,7 +596,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
         .hc-ticker-item:hover span {
           color: #F59E0B !important;
         }
-        @media (max-width: 1080px) {
+        @media (max-width: 1220px) {
           :global(.hc-desktop-nav) {
             display: none !important;
           }
