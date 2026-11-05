@@ -57,12 +57,12 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
       {/* ── TOP NOTIFICATION & CONTACT BAR ── */}
       <div 
         style={{
-          backgroundColor: '#0F172A',
-          color: '#CBD5E1',
+          background: 'linear-gradient(90deg, #0A192F 0%, #0F2A4A 100%)',
+          color: '#E2E8F0',
           fontSize: '0.8125rem',
           borderBottom: '1px solid rgba(255,255,255,0.08)',
-          paddingTop: '6px',
-          paddingBottom: '6px'
+          paddingTop: '8px',
+          paddingBottom: '8px'
         }}
       >
         <div 
@@ -72,59 +72,110 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             alignItems: 'center',
             justifyContent: 'space-between',
             flexWrap: 'wrap',
-            gap: '8px'
+            gap: '12px'
           }}
         >
-          {/* Contact Details */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
+          {/* Contact Details with smooth hover transition & pill effect */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
             <a 
               href={`tel:${INSTITUTE_INFO.phone}`} 
-              style={{ display: 'flex', alignItems: 'center', gap: '6px', transition: 'color 0.2s' }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#F59E0B')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}
+              className="hc-topbar-link"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '4px 12px',
+                borderRadius: '9999px',
+                backgroundColor: 'rgba(255, 255, 255, 0.06)',
+                border: '1px solid rgba(255, 255, 255, 0.12)',
+                color: '#F1F5F9',
+                textDecoration: 'none',
+                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                cursor: 'pointer'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = 'rgba(245, 158, 11, 0.2)';
+                e.currentTarget.style.borderColor = '#F59E0B';
+                e.currentTarget.style.color = '#FDE68A';
+                e.currentTarget.style.transform = 'translateY(-1px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.06)';
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.12)';
+                e.currentTarget.style.color = '#F1F5F9';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
             >
-              <Phone size={13} style={{ color: '#F59E0B' }} />
-              <span>{INSTITUTE_INFO.phone}</span>
+              <Phone size={13} style={{ color: '#F59E0B', transition: 'transform 0.3s' }} />
+              <span style={{ fontWeight: 600, letterSpacing: '0.02em' }}>{INSTITUTE_INFO.phone}</span>
             </a>
+
             <a 
               href={`mailto:${INSTITUTE_INFO.email}`} 
-              style={{ display: 'flex', alignItems: 'center', gap: '6px', transition: 'color 0.2s' }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#F59E0B')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}
+              className="hc-topbar-link"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '4px 12px',
+                borderRadius: '9999px',
+                backgroundColor: 'rgba(255, 255, 255, 0.06)',
+                border: '1px solid rgba(255, 255, 255, 0.12)',
+                color: '#F1F5F9',
+                textDecoration: 'none',
+                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                cursor: 'pointer'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = 'rgba(245, 158, 11, 0.2)';
+                e.currentTarget.style.borderColor = '#F59E0B';
+                e.currentTarget.style.color = '#FDE68A';
+                e.currentTarget.style.transform = 'translateY(-1px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.06)';
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.12)';
+                e.currentTarget.style.color = '#F1F5F9';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
             >
-              <Mail size={13} style={{ color: '#F59E0B' }} />
-              <span>{INSTITUTE_INFO.email}</span>
+              <Mail size={13} style={{ color: '#F59E0B', transition: 'transform 0.3s' }} />
+              <span style={{ fontWeight: 600, letterSpacing: '0.02em' }}>{INSTITUTE_INFO.email}</span>
             </a>
           </div>
 
-          {/* Announcement Ticker (English) */}
+          {/* Announcement Ticker */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#F8FAFC' }}>
             <span 
               style={{
-                backgroundColor: 'rgba(217, 164, 65, 0.2)',
+                backgroundColor: 'rgba(245, 158, 11, 0.2)',
                 color: '#F59E0B',
-                padding: '2px 8px',
-                borderRadius: '4px',
+                padding: '3px 10px',
+                borderRadius: '9999px',
                 fontWeight: 700,
                 fontSize: '0.75rem',
-                border: '1px solid rgba(217, 164, 65, 0.4)'
+                border: '1px solid rgba(245, 158, 11, 0.4)',
+                letterSpacing: '0.04em',
+                textTransform: 'uppercase'
               }}
             >
               New Batch
             </span>
-            <span style={{ fontSize: '0.8125rem' }}>
+            <span style={{ fontSize: '0.8125rem', color: '#E2E8F0' }}>
               UPSC & HPAS 2025-26 Foundation Batch Admissions Open • 15% Early Bird Scholarship
             </span>
           </div>
         </div>
       </div>
 
-      {/* ── MAIN NAVIGATION BAR ── */}
+      {/* ── MAIN NAVIGATION BAR (PREMIUM SLATE NAVY LOOK) ── */}
       <header
         style={{
-          backgroundColor: '#FFFFFF',
-          borderBottom: '1px solid #E2E8F0',
-          boxShadow: scrolled ? '0 10px 25px -5px rgba(20, 43, 74, 0.08)' : 'none',
+          background: 'linear-gradient(180deg, #0A192F 0%, #0D223E 100%)',
+          borderBottom: '2px solid rgba(245, 158, 11, 0.3)',
+          boxShadow: scrolled 
+            ? '0 12px 30px -5px rgba(0, 0, 0, 0.35)' 
+            : '0 4px 16px rgba(0, 0, 0, 0.2)',
           transition: 'all 0.25s ease'
         }}
       >
@@ -153,13 +204,13 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                 width: '46px',
                 height: '46px',
                 borderRadius: '12px',
-                backgroundColor: '#0F172A',
+                backgroundColor: '#0F2A4A',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: '#F59E0B',
                 border: '2px solid #F59E0B',
-                boxShadow: '0 4px 12px rgba(20, 43, 74, 0.15)',
+                boxShadow: '0 4px 14px rgba(245, 158, 11, 0.25)',
                 flexShrink: 0
               }}
             >
@@ -172,7 +223,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                 style={{
                   fontSize: '1.3125rem',
                   fontWeight: 800,
-                  color: '#0F172A',
+                  color: '#FFFFFF',
                   letterSpacing: '-0.02em',
                   lineHeight: 1.15
                 }}
@@ -182,7 +233,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
               <span 
                 style={{
                   fontSize: '0.6875rem',
-                  fontWeight: 600,
+                  fontWeight: 700,
                   color: '#F59E0B',
                   textTransform: 'uppercase',
                   letterSpacing: '0.06em',
@@ -194,12 +245,12 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             </div>
           </Link>
 
-          {/* 2. CENTER: NAVIGATION LINKS (Desktop) */}
+          {/* 2. CENTER: NAVIGATION LINKS (Desktop) - Perfectly Aligned */}
           <nav 
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '6px'
+              gap: '4px'
             }}
             className="hc-desktop-nav"
           >
@@ -210,26 +261,37 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                 return (
                   <div 
                     key={item.label}
-                    style={{ position: 'relative' }}
+                    style={{ position: 'relative', display: 'flex', alignItems: 'center' }}
                     onMouseEnter={() => setCoursesDropdown(true)}
                     onMouseLeave={() => setCoursesDropdown(false)}
                   >
                     <Link
                       href={item.href}
                       style={{
-                        display: 'flex',
+                        display: 'inline-flex',
                         alignItems: 'center',
+                        justifyContent: 'center',
                         gap: '4px',
-                        padding: '10px 14px',
+                        height: '40px',
+                        padding: '0 14px',
                         borderRadius: '8px',
                         fontSize: '0.9375rem',
                         fontWeight: 600,
-                        color: isActive ? '#1D4ED8' : '#1E293B',
-                        backgroundColor: isActive ? '#F1F5F9' : 'transparent',
-                        transition: 'all 0.15s ease'
+                        lineHeight: 1,
+                        color: isActive ? '#F59E0B' : '#E2E8F0',
+                        backgroundColor: isActive ? 'rgba(245, 158, 11, 0.15)' : 'transparent',
+                        border: isActive ? '1px solid rgba(245, 158, 11, 0.3)' : '1px solid transparent',
+                        transition: 'all 0.2s ease',
+                        textDecoration: 'none'
                       }}
-                      onMouseEnter={(e) => (e.currentTarget.style.color = '#1D4ED8')}
-                      onMouseLeave={(e) => !isActive && (e.currentTarget.style.color = '#1E293B')}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.color = '#F59E0B';
+                        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.08)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.color = isActive ? '#F59E0B' : '#E2E8F0';
+                        e.currentTarget.style.backgroundColor = isActive ? 'rgba(245, 158, 11, 0.15)' : 'transparent';
+                      }}
                     >
                       <span>{item.label}</span>
                       <ChevronDown size={14} style={{ transition: 'transform 0.2s', transform: coursesDropdown ? 'rotate(180deg)' : 'none' }} />
@@ -244,18 +306,19 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                           left: '50%',
                           transform: 'translateX(-50%)',
                           width: '420px',
-                          backgroundColor: '#FFFFFF',
+                          backgroundColor: '#0F2A4A',
                           borderRadius: '14px',
-                          boxShadow: '0 20px 40px rgba(20, 43, 74, 0.12)',
-                          border: '1px solid #E2E8F0',
+                          boxShadow: '0 20px 40px rgba(0, 0, 0, 0.4)',
+                          border: '1px solid rgba(245, 158, 11, 0.3)',
                           padding: '12px',
-                          marginTop: '4px',
+                          marginTop: '6px',
                           display: 'grid',
                           gridTemplateColumns: '1fr',
-                          gap: '6px'
+                          gap: '6px',
+                          zIndex: 200
                         }}
                       >
-                        <div style={{ padding: '8px 10px', fontSize: '0.75rem', fontWeight: 700, color: '#64748B', textTransform: 'uppercase', letterSpacing: '0.05em', borderBottom: '1px solid #F1F5F9' }}>
+                        <div style={{ padding: '8px 10px', fontSize: '0.75rem', fontWeight: 700, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.05em', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
                           Featured Examination Programs
                         </div>
                         {COURSES_DATA.slice(0, 5).map((course) => (
@@ -272,18 +335,18 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                               transition: 'background 0.15s ease',
                               textDecoration: 'none'
                             }}
-                            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#F8FAFC')}
+                            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.08)')}
                             onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
                           >
                             <div>
-                              <div style={{ fontSize: '0.875rem', fontWeight: 700, color: '#0F172A' }}>
+                              <div style={{ fontSize: '0.875rem', fontWeight: 700, color: '#FFFFFF' }}>
                                 {course.title.split('(')[0]}
                               </div>
-                              <div style={{ fontSize: '0.75rem', color: '#64748B' }}>
+                              <div style={{ fontSize: '0.75rem', color: '#94A3B8' }}>
                                 {course.duration} • {course.fee}
                               </div>
                             </div>
-                            <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#1D4ED8', backgroundColor: '#EFF6FF', padding: '3px 8px', borderRadius: '4px' }}>
+                            <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#F59E0B', backgroundColor: 'rgba(245, 158, 11, 0.15)', padding: '3px 8px', borderRadius: '4px' }}>
                               View
                             </span>
                           </Link>
@@ -295,8 +358,8 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                             marginTop: '6px',
                             padding: '10px',
                             borderRadius: '8px',
-                            backgroundColor: '#F8FAFC',
-                            color: '#1D4ED8',
+                            backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                            color: '#F59E0B',
                             fontSize: '0.8125rem',
                             fontWeight: 700,
                             textAlign: 'center',
@@ -319,16 +382,29 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                   key={item.label}
                   href={item.href}
                   style={{
-                    padding: '10px 14px',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    height: '40px',
+                    padding: '0 14px',
                     borderRadius: '8px',
                     fontSize: '0.9375rem',
                     fontWeight: 600,
-                    color: isActive ? '#1D4ED8' : '#1E293B',
-                    backgroundColor: isActive ? '#EFF6FF' : 'transparent',
-                    transition: 'all 0.15s ease'
+                    lineHeight: 1,
+                    color: isActive ? '#F59E0B' : '#E2E8F0',
+                    backgroundColor: isActive ? 'rgba(245, 158, 11, 0.15)' : 'transparent',
+                    border: isActive ? '1px solid rgba(245, 158, 11, 0.3)' : '1px solid transparent',
+                    transition: 'all 0.2s ease',
+                    textDecoration: 'none'
                   }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = '#1D4ED8')}
-                  onMouseLeave={(e) => !isActive && (e.currentTarget.style.color = '#1E293B')}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = '#F59E0B';
+                    e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.08)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = isActive ? '#F59E0B' : '#E2E8F0';
+                    e.currentTarget.style.backgroundColor = isActive ? 'rgba(245, 158, 11, 0.15)' : 'transparent';
+                  }}
                 >
                   {item.label}
                 </Link>
@@ -348,10 +424,28 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             {/* Call Now Button */}
             <a
               href={`tel:${INSTITUTE_INFO.phone}`}
-              className="hc-btn-secondary"
               style={{
-                padding: '9px 16px',
-                fontSize: '0.875rem'
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                height: '42px',
+                padding: '0 18px',
+                borderRadius: '8px',
+                fontSize: '0.875rem',
+                fontWeight: 700,
+                color: '#FFFFFF',
+                backgroundColor: 'rgba(255, 255, 255, 0.08)',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                transition: 'all 0.2s ease',
+                textDecoration: 'none'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#FFFFFF';
+                e.currentTarget.style.color = '#0F172A';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.08)';
+                e.currentTarget.style.color = '#FFFFFF';
               }}
             >
               <Phone size={15} />
@@ -361,13 +455,32 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             {/* Student Enquiry Button */}
             <button
               onClick={handleEnquiryClick}
-              className="hc-btn-primary"
               style={{
-                padding: '10px 20px',
-                fontSize: '0.875rem'
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                height: '42px',
+                padding: '0 20px',
+                borderRadius: '8px',
+                fontSize: '0.875rem',
+                fontWeight: 700,
+                color: '#FFFFFF',
+                background: 'linear-gradient(135deg, #1D4ED8 0%, #2563EB 100%)',
+                boxShadow: '0 4px 14px rgba(29, 78, 216, 0.4)',
+                border: 'none',
+                cursor: 'pointer',
+                transition: 'all 0.2s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 6px 20px rgba(29, 78, 216, 0.6)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 14px rgba(29, 78, 216, 0.4)';
               }}
             >
-              <Sparkles size={15} style={{ color: '#F59E0B' }} />
+              <Sparkles size={15} style={{ color: '#FDE68A' }} />
               <span>Student Enquiry</span>
             </button>
           </div>
@@ -375,43 +488,45 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
           {/* Hamburger Menu Toggle (Mobile) */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle Navigation Menu"
             style={{
-              display: 'none',
-              padding: '8px',
+              padding: '10px',
               borderRadius: '8px',
-              color: '#0F172A',
-              backgroundColor: '#F1F5F9'
+              color: '#FFFFFF',
+              backgroundColor: 'rgba(255, 255, 255, 0.08)',
+              border: '1px solid rgba(255, 255, 255, 0.15)',
+              display: 'none',
+              cursor: 'pointer'
             }}
             className="hc-mobile-toggle"
+            aria-label="Toggle navigation menu"
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </header>
 
-      {/* ── RESPONSIVE MOBILE DRAWER ── */}
+      {/* ── MOBILE DRAWER NAVIGATION MENU ── */}
       {mobileMenuOpen && (
         <div
           style={{
             position: 'fixed',
             inset: 0,
-            top: '76px',
-            backgroundColor: 'rgba(20, 43, 74, 0.6)',
-            backdropFilter: 'blur(4px)',
+            top: '116px',
+            backgroundColor: 'rgba(10, 25, 47, 0.8)',
+            backdropFilter: 'blur(6px)',
             zIndex: 99
           }}
           onClick={() => setMobileMenuOpen(false)}
         >
           <div
             style={{
-              backgroundColor: '#FFFFFF',
+              backgroundColor: '#0A192F',
               width: '100%',
-              maxHeight: 'calc(100vh - 76px)',
+              maxHeight: 'calc(100vh - 116px)',
               overflowY: 'auto',
               padding: '24px 20px',
               borderBottom: '2px solid #F59E0B',
-              boxShadow: '0 20px 40px rgba(0,0,0,0.15)'
+              boxShadow: '0 20px 40px rgba(0,0,0,0.4)'
             }}
             onClick={(e) => e.stopPropagation()}
           >
@@ -426,15 +541,16 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                     borderRadius: '8px',
                     fontSize: '1rem',
                     fontWeight: 700,
-                    color: pathname === link.href ? '#1D4ED8' : '#0F172A',
-                    backgroundColor: pathname === link.href ? '#EFF6FF' : '#F8FAFC',
+                    color: pathname === link.href ? '#F59E0B' : '#FFFFFF',
+                    backgroundColor: pathname === link.href ? 'rgba(245, 158, 11, 0.15)' : 'rgba(255, 255, 255, 0.05)',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'space-between'
+                    justifyContent: 'space-between',
+                    textDecoration: 'none'
                   }}
                 >
                   <span>{link.label}</span>
-                  <ArrowRight size={16} style={{ color: '#64748B' }} />
+                  <ArrowRight size={16} style={{ color: '#F59E0B' }} />
                 </Link>
               ))}
             </div>
@@ -442,19 +558,45 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               <button
                 onClick={handleEnquiryClick}
-                className="hc-btn-primary"
-                style={{ width: '100%', justifyContent: 'center' }}
+                style={{
+                  width: '100%',
+                  height: '46px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '8px',
+                  borderRadius: '10px',
+                  fontWeight: 700,
+                  fontSize: '0.9375rem',
+                  color: '#FFFFFF',
+                  background: 'linear-gradient(135deg, #1D4ED8 0%, #2563EB 100%)',
+                  border: 'none',
+                  cursor: 'pointer'
+                }}
               >
-                <Sparkles size={16} />
+                <Sparkles size={16} style={{ color: '#FDE68A' }} />
                 <span>Student Admission Enquiry</span>
               </button>
 
               <a
                 href={`tel:${INSTITUTE_INFO.phone}`}
-                className="hc-btn-secondary"
-                style={{ width: '100%', justifyContent: 'center' }}
+                style={{
+                  width: '100%',
+                  height: '46px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '8px',
+                  borderRadius: '10px',
+                  fontWeight: 700,
+                  fontSize: '0.9375rem',
+                  color: '#FFFFFF',
+                  backgroundColor: 'rgba(255, 255, 255, 0.08)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  textDecoration: 'none'
+                }}
               >
-                <Phone size={16} />
+                <Phone size={16} style={{ color: '#F59E0B' }} />
                 <span>Call Admission Helpline</span>
               </a>
             </div>
