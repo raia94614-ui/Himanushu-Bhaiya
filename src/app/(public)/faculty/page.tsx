@@ -17,10 +17,10 @@ export default function FacultyPage() {
         {/* Page Banner Header */}
         <section
           style={{
-            backgroundColor: '#142B4A',
+            backgroundColor: '#0F172A',
             color: '#FFFFFF',
             padding: '56px 0',
-            borderBottom: '4px solid #D9A441',
+            borderBottom: '4px solid #F59E0B',
             textAlign: 'center'
           }}
         >
@@ -28,7 +28,7 @@ export default function FacultyPage() {
             <span
               style={{
                 backgroundColor: 'rgba(217, 164, 65, 0.2)',
-                color: '#D9A441',
+                color: '#F59E0B',
                 padding: '4px 14px',
                 borderRadius: '9999px',
                 fontSize: '0.8125rem',
@@ -70,7 +70,7 @@ export default function FacultyPage() {
                     flexDirection: 'column',
                     alignItems: 'center',
                     textAlign: 'center',
-                    borderTop: '4px solid #D9A441'
+                    borderTop: '4px solid #F59E0B'
                   }}
                 >
                   {/* Faculty Crest Avatar */}
@@ -79,9 +79,9 @@ export default function FacultyPage() {
                       width: '100px',
                       height: '100px',
                       borderRadius: '50%',
-                      backgroundColor: '#142B4A',
-                      color: '#D9A441',
-                      border: '3px solid #D9A441',
+                      backgroundColor: '#0F172A',
+                      color: '#F59E0B',
+                      border: '3px solid #F59E0B',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -94,10 +94,10 @@ export default function FacultyPage() {
                     {fac.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
                   </div>
 
-                  <h2 style={{ fontSize: '1.3125rem', fontWeight: 800, color: '#142B4A', marginBottom: '4px' }}>
+                  <h2 style={{ fontSize: '1.3125rem', fontWeight: 800, color: '#0F172A', marginBottom: '4px' }}>
                     {fac.name}
                   </h2>
-                  <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: '#D9A441', textTransform: 'uppercase', marginBottom: '12px' }}>
+                  <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: '#F59E0B', textTransform: 'uppercase', marginBottom: '12px' }}>
                     {fac.designation}
                   </div>
 
@@ -105,7 +105,7 @@ export default function FacultyPage() {
                   <div
                     style={{
                       backgroundColor: '#EFF6FF',
-                      color: '#2457A7',
+                      color: '#1D4ED8',
                       fontSize: '0.875rem',
                       fontWeight: 700,
                       padding: '6px 14px',

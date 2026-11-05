@@ -18,13 +18,13 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer style={{ backgroundColor: '#142B4A', color: '#CBD5E1', borderTop: '4px solid #D9A441' }}>
+    <footer style={{ backgroundColor: '#0F172A', color: '#CBD5E1', borderTop: '4px solid #F59E0B' }}>
       {/* ── TOP HIGHLIGHT BANNER ── */}
       <div style={{ backgroundColor: '#0F2038', padding: '32px 0', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
         <div className="hc-container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '24px', alignItems: 'center' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-              <div style={{ width: '44px', height: '44px', borderRadius: '10px', backgroundColor: 'rgba(217,164,65,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#D9A441' }}>
+              <div style={{ width: '44px', height: '44px', borderRadius: '10px', backgroundColor: 'rgba(217,164,65,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#F59E0B' }}>
                 <ShieldCheck size={24} />
               </div>
               <div>
@@ -34,7 +34,7 @@ export default function Footer() {
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-              <div style={{ width: '44px', height: '44px', borderRadius: '10px', backgroundColor: 'rgba(217,164,65,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#D9A441' }}>
+              <div style={{ width: '44px', height: '44px', borderRadius: '10px', backgroundColor: 'rgba(217,164,65,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#F59E0B' }}>
                 <GraduationCap size={24} />
               </div>
               <div>
@@ -44,7 +44,7 @@ export default function Footer() {
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-              <div style={{ width: '44px', height: '44px', borderRadius: '10px', backgroundColor: 'rgba(217,164,65,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#D9A441' }}>
+              <div style={{ width: '44px', height: '44px', borderRadius: '10px', backgroundColor: 'rgba(217,164,65,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#F59E0B' }}>
                 <Clock size={24} />
               </div>
               <div>
@@ -63,18 +63,18 @@ export default function Footer() {
             {/* Col 1: Institute About */}
             <div style={{ gridColumn: 'span 1' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
-                <div style={{ width: '38px', height: '38px', borderRadius: '8px', backgroundColor: '#D9A441', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#142B4A' }}>
+                <div style={{ width: '38px', height: '38px', borderRadius: '8px', backgroundColor: '#F59E0B', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#0F172A' }}>
                   <GraduationCap size={22} />
                 </div>
                 <div>
                   <span style={{ fontSize: '1.25rem', fontWeight: 800, color: '#FFFFFF' }}>{INSTITUTE_INFO.name}</span>
-                  <div style={{ fontSize: '0.6875rem', color: '#D9A441', fontWeight: 600 }}>Estd. {INSTITUTE_INFO.established}</div>
+                  <div style={{ fontSize: '0.6875rem', color: '#F59E0B', fontWeight: 600 }}>Estd. {INSTITUTE_INFO.established}</div>
                 </div>
               </div>
               <p style={{ fontSize: '0.875rem', lineHeight: 1.7, color: '#94A3B8', marginBottom: '20px' }}>
                 {INSTITUTE_INFO.tagline}. Dedicated to delivering ethical, rigorous, and result-oriented coaching for Civil Services, State Administrative Services, and competitive examinations.
               </p>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#D9A441', fontSize: '0.8125rem', fontWeight: 600 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#F59E0B', fontSize: '0.8125rem', fontWeight: 600 }}>
                 <CheckCircle2 size={16} />
                 <span>{INSTITUTE_INFO.subTagline}</span>
               </div>
@@ -82,30 +82,30 @@ export default function Footer() {
 
             {/* Col 2: Quick Links */}
             <div>
-              <h4 style={{ color: '#FFFFFF', fontSize: '1rem', fontWeight: 700, marginBottom: '20px', borderBottom: '2px solid #D9A441', display: 'inline-block', paddingBottom: '4px' }}>
+              <h4 style={{ color: '#FFFFFF', fontSize: '1rem', fontWeight: 700, marginBottom: '20px', borderBottom: '2px solid #F59E0B', display: 'inline-block', paddingBottom: '4px' }}>
                 Quick Links
               </h4>
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.875rem' }}>
-                <li><Link href="/" style={{ color: '#CBD5E1', transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#D9A441')} onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}>Home</Link></li>
-                <li><Link href="/about" style={{ color: '#CBD5E1', transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#D9A441')} onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}>About Institute</Link></li>
-                <li><Link href="/courses" style={{ color: '#CBD5E1', transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#D9A441')} onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}>Courses & Programs</Link></li>
-                <li><Link href="/faculty" style={{ color: '#CBD5E1', transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#D9A441')} onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}>Expert Faculty</Link></li>
-                <li><Link href="/results" style={{ color: '#CBD5E1', transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#D9A441')} onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}>Results & Toppers</Link></li>
-                <li><Link href="/study-materials" style={{ color: '#CBD5E1', transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#D9A441')} onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}>Free Study Material</Link></li>
-                <li><Link href="/contact" style={{ color: '#CBD5E1', transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#D9A441')} onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}>Contact & Admissions</Link></li>
+                <li><Link href="/" style={{ color: '#CBD5E1', transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#F59E0B')} onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}>Home</Link></li>
+                <li><Link href="/about" style={{ color: '#CBD5E1', transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#F59E0B')} onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}>About Institute</Link></li>
+                <li><Link href="/courses" style={{ color: '#CBD5E1', transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#F59E0B')} onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}>Courses & Programs</Link></li>
+                <li><Link href="/faculty" style={{ color: '#CBD5E1', transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#F59E0B')} onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}>Expert Faculty</Link></li>
+                <li><Link href="/results" style={{ color: '#CBD5E1', transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#F59E0B')} onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}>Results & Toppers</Link></li>
+                <li><Link href="/study-materials" style={{ color: '#CBD5E1', transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#F59E0B')} onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}>Free Study Material</Link></li>
+                <li><Link href="/contact" style={{ color: '#CBD5E1', transition: 'color 0.2s' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#F59E0B')} onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}>Contact & Admissions</Link></li>
               </ul>
             </div>
 
             {/* Col 3: Popular Courses */}
             <div>
-              <h4 style={{ color: '#FFFFFF', fontSize: '1rem', fontWeight: 700, marginBottom: '20px', borderBottom: '2px solid #D9A441', display: 'inline-block', paddingBottom: '4px' }}>
+              <h4 style={{ color: '#FFFFFF', fontSize: '1rem', fontWeight: 700, marginBottom: '20px', borderBottom: '2px solid #F59E0B', display: 'inline-block', paddingBottom: '4px' }}>
                 Examination Courses
               </h4>
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.875rem' }}>
                 {COURSES_DATA.slice(0, 6).map((c) => (
                   <li key={c.id}>
-                    <Link href="/courses" style={{ color: '#CBD5E1', transition: 'color 0.2s', display: 'flex', alignItems: 'center', gap: '6px' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#D9A441')} onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}>
-                      <ArrowRight size={12} style={{ color: '#D9A441' }} />
+                    <Link href="/courses" style={{ color: '#CBD5E1', transition: 'color 0.2s', display: 'flex', alignItems: 'center', gap: '6px' }} onMouseEnter={(e) => (e.currentTarget.style.color = '#F59E0B')} onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}>
+                      <ArrowRight size={12} style={{ color: '#F59E0B' }} />
                       <span>{c.title.split('(')[0]}</span>
                     </Link>
                   </li>
@@ -115,20 +115,20 @@ export default function Footer() {
 
             {/* Col 4: Contact Information */}
             <div>
-              <h4 style={{ color: '#FFFFFF', fontSize: '1rem', fontWeight: 700, marginBottom: '20px', borderBottom: '2px solid #D9A441', display: 'inline-block', paddingBottom: '4px' }}>
+              <h4 style={{ color: '#FFFFFF', fontSize: '1rem', fontWeight: 700, marginBottom: '20px', borderBottom: '2px solid #F59E0B', display: 'inline-block', paddingBottom: '4px' }}>
                 Campus Office
               </h4>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', fontSize: '0.875rem', color: '#94A3B8' }}>
                 <div style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                  <MapPin size={18} style={{ color: '#D9A441', flexShrink: 0, marginTop: '2px' }} />
+                  <MapPin size={18} style={{ color: '#F59E0B', flexShrink: 0, marginTop: '2px' }} />
                   <span>{INSTITUTE_INFO.address}</span>
                 </div>
                 <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                  <Phone size={16} style={{ color: '#D9A441', flexShrink: 0 }} />
+                  <Phone size={16} style={{ color: '#F59E0B', flexShrink: 0 }} />
                   <a href={`tel:${INSTITUTE_INFO.phone}`} style={{ color: '#CBD5E1' }}>{INSTITUTE_INFO.phone}</a>
                 </div>
                 <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                  <Mail size={16} style={{ color: '#D9A441', flexShrink: 0 }} />
+                  <Mail size={16} style={{ color: '#F59E0B', flexShrink: 0 }} />
                   <a href={`mailto:${INSTITUTE_INFO.email}`} style={{ color: '#CBD5E1' }}>{INSTITUTE_INFO.email}</a>
                 </div>
                 <div style={{ marginTop: '8px' }}>

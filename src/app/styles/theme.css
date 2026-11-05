@@ -12,10 +12,10 @@
    ========================================================================== */
 
 :root {
-  --primary: #142B4A;
-  --secondary: #2457A7;
-  --accent: #D9A441;
-  --accent-light: #FBF0D9;
+  --primary: #0F172A;
+  --secondary: #1D4ED8;
+  --accent: #D97706;
+  --accent-light: #FEF3C7;
   --bg: #F8FAFC;
   --card: #FFFFFF;
   --text: #1E293B;
@@ -188,19 +188,20 @@ img, svg {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 12px 24px;
+  padding: 14px 26px;
   border-radius: 10px;
   font-size: 0.9375rem;
   font-weight: 700;
-  background-color: var(--accent);
-  color: var(--primary) !important;
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  color: #FFFFFF !important;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 14px rgba(217, 164, 65, 0.3);
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
 }
 
 .hc-btn-gold:hover {
-  background-color: #C49132;
+  background: linear-gradient(135deg, #D97706 0%, #B45309 100%);
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
 }
 
 /* Card base */

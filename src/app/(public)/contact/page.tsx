@@ -42,10 +42,10 @@ export default function ContactPage() {
         {/* Banner */}
         <section
           style={{
-            backgroundColor: '#142B4A',
+            backgroundColor: '#0F172A',
             color: '#FFFFFF',
             padding: '56px 0',
-            borderBottom: '4px solid #D9A441',
+            borderBottom: '4px solid #F59E0B',
             textAlign: 'center'
           }}
         >
@@ -53,7 +53,7 @@ export default function ContactPage() {
             <span
               style={{
                 backgroundColor: 'rgba(217, 164, 65, 0.2)',
-                color: '#D9A441',
+                color: '#F59E0B',
                 padding: '4px 14px',
                 borderRadius: '9999px',
                 fontSize: '0.8125rem',
@@ -95,42 +95,42 @@ export default function ContactPage() {
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
                   <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-                    <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#EFF6FF', color: '#2457A7', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#EFF6FF', color: '#1D4ED8', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                       <MapPin size={24} />
                     </div>
                     <div>
-                      <strong style={{ fontSize: '1rem', color: '#142B4A', display: 'block' }}>Main Campus Address</strong>
+                      <strong style={{ fontSize: '1rem', color: '#0F172A', display: 'block' }}>Main Campus Address</strong>
                       <span style={{ fontSize: '0.9375rem', color: '#64748B', lineHeight: 1.6 }}>{INSTITUTE_INFO.address}</span>
                     </div>
                   </div>
 
                   <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-                    <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#FEF3C7', color: '#D9A441', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#FEF3C7', color: '#F59E0B', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                       <Phone size={24} />
                     </div>
                     <div>
-                      <strong style={{ fontSize: '1rem', color: '#142B4A', display: 'block' }}>Helpline Numbers</strong>
-                      <span style={{ fontSize: '0.9375rem', color: '#64748B', display: 'block' }}>Primary: <a href={`tel:${INSTITUTE_INFO.phone}`} style={{ color: '#2457A7', fontWeight: 700 }}>{INSTITUTE_INFO.phone}</a></span>
+                      <strong style={{ fontSize: '1rem', color: '#0F172A', display: 'block' }}>Helpline Numbers</strong>
+                      <span style={{ fontSize: '0.9375rem', color: '#64748B', display: 'block' }}>Primary: <a href={`tel:${INSTITUTE_INFO.phone}`} style={{ color: '#1D4ED8', fontWeight: 700 }}>{INSTITUTE_INFO.phone}</a></span>
                       <span style={{ fontSize: '0.9375rem', color: '#64748B' }}>Alternate: {INSTITUTE_INFO.altPhone}</span>
                     </div>
                   </div>
 
                   <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-                    <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#EFF6FF', color: '#2457A7', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#EFF6FF', color: '#1D4ED8', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                       <Mail size={24} />
                     </div>
                     <div>
-                      <strong style={{ fontSize: '1rem', color: '#142B4A', display: 'block' }}>Official Email</strong>
-                      <a href={`mailto:${INSTITUTE_INFO.email}`} style={{ fontSize: '0.9375rem', color: '#2457A7' }}>{INSTITUTE_INFO.email}</a>
+                      <strong style={{ fontSize: '1rem', color: '#0F172A', display: 'block' }}>Official Email</strong>
+                      <a href={`mailto:${INSTITUTE_INFO.email}`} style={{ fontSize: '0.9375rem', color: '#1D4ED8' }}>{INSTITUTE_INFO.email}</a>
                     </div>
                   </div>
 
                   <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-                    <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#FEF3C7', color: '#D9A441', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#FEF3C7', color: '#F59E0B', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                       <Clock size={24} />
                     </div>
                     <div>
-                      <strong style={{ fontSize: '1rem', color: '#142B4A', display: 'block' }}>Office Working Hours</strong>
+                      <strong style={{ fontSize: '1rem', color: '#0F172A', display: 'block' }}>Office Working Hours</strong>
                       <span style={{ fontSize: '0.9375rem', color: '#64748B' }}>Monday to Sunday: 8:00 AM – 8:30 PM (All 7 Days)</span>
                     </div>
                   </div>
@@ -164,14 +164,14 @@ export default function ContactPage() {
                 className="hc-card"
                 style={{
                   padding: '36px',
-                  borderTop: '4px solid #142B4A'
+                  borderTop: '4px solid #0F172A'
                 }}
               >
                 <div style={{ marginBottom: '20px' }}>
-                  <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#D9A441', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#F59E0B', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                     Quick Message
                   </span>
-                  <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#142B4A', marginTop: '4px' }}>
+                  <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#0F172A', marginTop: '4px' }}>
                     Send an Enquiry Message
                   </h3>
                   <p style={{ fontSize: '0.875rem', color: '#64748B', marginTop: '4px' }}>
@@ -184,7 +184,7 @@ export default function ContactPage() {
                     <div style={{ width: '60px', height: '60px', borderRadius: '50%', backgroundColor: '#DCFCE7', color: '#16A34A', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px auto' }}>
                       <CheckCircle2 size={36} />
                     </div>
-                    <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#142B4A', marginBottom: '8px' }}>
+                    <h4 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '8px' }}>
                       Message Received!
                     </h4>
                     <p style={{ fontSize: '0.9375rem', color: '#64748B', lineHeight: 1.6, marginBottom: '20px' }}>

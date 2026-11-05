@@ -21,10 +21,10 @@ export default function ResultsPage() {
         {/* Banner */}
         <section
           style={{
-            backgroundColor: '#142B4A',
+            backgroundColor: '#0F172A',
             color: '#FFFFFF',
             padding: '56px 0',
-            borderBottom: '4px solid #D9A441',
+            borderBottom: '4px solid #F59E0B',
             textAlign: 'center'
           }}
         >
@@ -32,7 +32,7 @@ export default function ResultsPage() {
             <span
               style={{
                 backgroundColor: 'rgba(217, 164, 65, 0.2)',
-                color: '#D9A441',
+                color: '#F59E0B',
                 padding: '4px 14px',
                 borderRadius: '9999px',
                 fontSize: '0.8125rem',
@@ -65,15 +65,15 @@ export default function ResultsPage() {
           <div className="hc-container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px', textAlign: 'center' }}>
               <div>
-                <div style={{ fontSize: '2rem', fontWeight: 900, color: '#D9A441' }}>12 Times</div>
+                <div style={{ fontSize: '2rem', fontWeight: 900, color: '#F59E0B' }}>12 Times</div>
                 <div style={{ fontSize: '0.875rem', color: '#64748B', fontWeight: 600 }}>All India Rank 1 in Exams</div>
               </div>
               <div>
-                <div style={{ fontSize: '2rem', fontWeight: 900, color: '#2457A7' }}>850+</div>
+                <div style={{ fontSize: '2rem', fontWeight: 900, color: '#1D4ED8' }}>850+</div>
                 <div style={{ fontSize: '0.875rem', color: '#64748B', fontWeight: 600 }}>UPSC CSE Civil Servants</div>
               </div>
               <div>
-                <div style={{ fontSize: '2rem', fontWeight: 900, color: '#142B4A' }}>1,850+</div>
+                <div style={{ fontSize: '2rem', fontWeight: 900, color: '#0F172A' }}>1,850+</div>
                 <div style={{ fontSize: '0.875rem', color: '#64748B', fontWeight: 600 }}>State PCS & HPAS Selections</div>
               </div>
               <div>
@@ -94,7 +94,7 @@ export default function ResultsPage() {
                   className="hc-card"
                   style={{
                     padding: '32px 28px',
-                    borderTop: '4px solid #D9A441',
+                    borderTop: '4px solid #F59E0B',
                     display: 'flex',
                     flexDirection: 'column'
                   }}
@@ -102,8 +102,8 @@ export default function ResultsPage() {
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
                     <span
                       style={{
-                        backgroundColor: '#D9A441',
-                        color: '#142B4A',
+                        backgroundColor: '#F59E0B',
+                        color: '#0F172A',
                         fontWeight: 900,
                         fontSize: '1rem',
                         padding: '4px 14px',
@@ -117,10 +117,10 @@ export default function ResultsPage() {
                     </span>
                   </div>
 
-                  <h2 style={{ fontSize: '1.375rem', fontWeight: 800, color: '#142B4A', marginBottom: '4px' }}>
+                  <h2 style={{ fontSize: '1.375rem', fontWeight: 800, color: '#0F172A', marginBottom: '4px' }}>
                     {t.name}
                   </h2>
-                  <div style={{ fontSize: '0.9375rem', fontWeight: 700, color: '#2457A7', marginBottom: '4px' }}>
+                  <div style={{ fontSize: '0.9375rem', fontWeight: 700, color: '#1D4ED8', marginBottom: '4px' }}>
                     {t.exam}
                   </div>
                   <div style={{ fontSize: '0.8125rem', color: '#64748B', marginBottom: '20px' }}>
@@ -136,7 +136,7 @@ export default function ResultsPage() {
                       backgroundColor: '#F8FAFC',
                       padding: '16px',
                       borderRadius: '10px',
-                      borderLeft: '3px solid #2457A7',
+                      borderLeft: '3px solid #1D4ED8',
                       flex: 1,
                       marginBottom: '20px'
                     }}

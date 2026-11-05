@@ -38,10 +38,10 @@ export default function CoursesPage() {
         {/* Page Banner Header */}
         <section
           style={{
-            backgroundColor: '#142B4A',
+            backgroundColor: '#0F172A',
             color: '#FFFFFF',
             padding: '56px 0',
-            borderBottom: '4px solid #D9A441',
+            borderBottom: '4px solid #F59E0B',
             textAlign: 'center'
           }}
         >
@@ -49,7 +49,7 @@ export default function CoursesPage() {
             <span
               style={{
                 backgroundColor: 'rgba(217, 164, 65, 0.2)',
-                color: '#D9A441',
+                color: '#F59E0B',
                 padding: '4px 14px',
                 borderRadius: '9999px',
                 fontSize: '0.8125rem',
@@ -90,10 +90,10 @@ export default function CoursesPage() {
                     borderRadius: '8px',
                     fontSize: '0.8125rem',
                     fontWeight: 700,
-                    backgroundColor: selectedCategory === cat ? '#142B4A' : '#F1F5F9',
+                    backgroundColor: selectedCategory === cat ? '#0F172A' : '#F1F5F9',
                     color: selectedCategory === cat ? '#FFFFFF' : '#475569',
                     border: '1px solid',
-                    borderColor: selectedCategory === cat ? '#142B4A' : '#E2E8F0',
+                    borderColor: selectedCategory === cat ? '#0F172A' : '#E2E8F0',
                     transition: 'all 0.15s ease'
                   }}
                 >
@@ -115,13 +115,13 @@ export default function CoursesPage() {
                   style={{
                     display: 'flex',
                     flexDirection: 'column',
-                    borderTop: '4px solid #142B4A'
+                    borderTop: '4px solid #0F172A'
                   }}
                 >
                   {/* Header Area */}
                   <div style={{ padding: '28px 28px 16px 28px', borderBottom: '1px solid #F1F5F9' }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-                      <span style={{ fontSize: '0.75rem', fontWeight: 800, color: '#D9A441', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                      <span style={{ fontSize: '0.75rem', fontWeight: 800, color: '#F59E0B', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                         {course.category}
                       </span>
                       {course.badge && (
@@ -130,7 +130,7 @@ export default function CoursesPage() {
                         </span>
                       )}
                     </div>
-                    <h2 style={{ fontSize: '1.375rem', fontWeight: 800, color: '#142B4A', lineHeight: 1.3 }}>
+                    <h2 style={{ fontSize: '1.375rem', fontWeight: 800, color: '#0F172A', lineHeight: 1.3 }}>
                       {course.title}
                     </h2>
                   </div>
@@ -156,15 +156,15 @@ export default function CoursesPage() {
                     >
                       <div>
                         <span style={{ fontSize: '0.6875rem', color: '#64748B', display: 'block', textTransform: 'uppercase' }}>Batch Duration</span>
-                        <strong style={{ fontSize: '0.875rem', color: '#142B4A' }}>{course.duration}</strong>
+                        <strong style={{ fontSize: '0.875rem', color: '#0F172A' }}>{course.duration}</strong>
                       </div>
                       <div>
                         <span style={{ fontSize: '0.6875rem', color: '#64748B', display: 'block', textTransform: 'uppercase' }}>Admission Fee</span>
-                        <strong style={{ fontSize: '0.9375rem', color: '#2457A7' }}>{course.fee}</strong>
+                        <strong style={{ fontSize: '0.9375rem', color: '#1D4ED8' }}>{course.fee}</strong>
                       </div>
                       <div>
                         <span style={{ fontSize: '0.6875rem', color: '#64748B', display: 'block', textTransform: 'uppercase' }}>Eligibility</span>
-                        <strong style={{ fontSize: '0.8125rem', color: '#142B4A' }}>{course.eligibility}</strong>
+                        <strong style={{ fontSize: '0.8125rem', color: '#0F172A' }}>{course.eligibility}</strong>
                       </div>
                     </div>
 
@@ -179,7 +179,7 @@ export default function CoursesPage() {
                             key={i}
                             style={{
                               backgroundColor: '#EFF6FF',
-                              color: '#2457A7',
+                              color: '#1D4ED8',
                               fontSize: '0.75rem',
                               fontWeight: 600,
                               padding: '4px 10px',

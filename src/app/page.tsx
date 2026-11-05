@@ -60,13 +60,13 @@ export default function HomePage() {
         {/* ── 1. PREMIUM HERO SECTION ── */}
         <section
           style={{
-            backgroundColor: '#142B4A',
+            backgroundColor: '#0F172A',
             color: '#FFFFFF',
             position: 'relative',
             overflow: 'hidden',
             paddingTop: '64px',
             paddingBottom: '80px',
-            borderBottom: '4px solid #D9A441'
+            borderBottom: '4px solid #F59E0B'
           }}
         >
           {/* Subtle geometric pattern background */}
@@ -75,7 +75,7 @@ export default function HomePage() {
               position: 'absolute',
               inset: 0,
               opacity: 0.04,
-              backgroundImage: 'radial-gradient(circle, #D9A441 1px, transparent 1px)',
+              backgroundImage: 'radial-gradient(circle, #F59E0B 1px, transparent 1px)',
               backgroundSize: '32px 32px',
               pointerEvents: 'none'
             }}
@@ -103,7 +103,7 @@ export default function HomePage() {
                     borderRadius: '9999px',
                     backgroundColor: 'rgba(217, 164, 65, 0.15)',
                     border: '1px solid rgba(217, 164, 65, 0.4)',
-                    color: '#D9A441',
+                    color: '#F59E0B',
                     fontSize: '0.8125rem',
                     fontWeight: 700,
                     marginBottom: '20px'
@@ -126,7 +126,7 @@ export default function HomePage() {
                   className="hc-hero-title"
                 >
                   Dedicated to Nation Building <br />
-                  <span style={{ color: '#D9A441' }}>Shaping India&apos;s</span> Future Leaders
+                  <span style={{ color: '#F59E0B' }}>Shaping India&apos;s</span> Future Leaders
                 </h1>
 
                 {/* Subtitle Paragraph */}
@@ -163,25 +163,22 @@ export default function HomePage() {
 
                   <Link
                     href="/courses"
-                    className="hc-btn-secondary"
                     style={{
-                      padding: '13px 26px',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      padding: '14px 26px',
                       fontSize: '1rem',
-                      backgroundColor: 'transparent',
-                      color: '#FFFFFF',
-                      borderColor: 'rgba(255,255,255,0.4)'
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = '#FFFFFF';
-                      e.currentTarget.style.color = '#142B4A';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = 'transparent';
-                      e.currentTarget.style.color = '#FFFFFF';
+                      fontWeight: 700,
+                      backgroundColor: '#FFFFFF',
+                      color: '#0F172A',
+                      borderRadius: '10px',
+                      border: '1px solid #E2E8F0',
+                      boxShadow: '0 4px 14px rgba(0,0,0,0.1)'
                     }}
                   >
-                    <BookOpen size={18} />
-                    <span>Explore All Courses</span>
+                    <BookOpen size={18} style={{ color: '#1D4ED8' }} />
+                    <span style={{ color: '#0F172A' }}>Explore All Courses</span>
                   </Link>
                 </div>
 
@@ -231,8 +228,8 @@ export default function HomePage() {
                     position: 'absolute',
                     top: '-16px',
                     right: '28px',
-                    backgroundColor: '#D9A441',
-                    color: '#142B4A',
+                    backgroundColor: '#F59E0B',
+                    color: '#0F172A',
                     padding: '6px 14px',
                     borderRadius: '9999px',
                     fontWeight: 800,
@@ -245,10 +242,10 @@ export default function HomePage() {
                 </div>
 
                 <div style={{ marginBottom: '20px' }}>
-                  <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#D9A441', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#F59E0B', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                     Himanshu Classes Excellence Metrics
                   </span>
-                  <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#142B4A', marginTop: '4px' }}>
+                  <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#0F172A', marginTop: '4px' }}>
                     Proven Legacy of Ranks
                   </h3>
                 </div>
@@ -263,17 +260,17 @@ export default function HomePage() {
                   }}
                 >
                   <div style={{ backgroundColor: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0' }}>
-                    <div style={{ fontSize: '1.875rem', fontWeight: 900, color: '#2457A7', lineHeight: 1 }}>50,000+</div>
+                    <div style={{ fontSize: '1.875rem', fontWeight: 900, color: '#1D4ED8', lineHeight: 1 }}>50,000+</div>
                     <div style={{ fontSize: '0.8125rem', fontWeight: 600, color: '#64748B', marginTop: '6px' }}>Students Mentored</div>
                   </div>
 
                   <div style={{ backgroundColor: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0' }}>
-                    <div style={{ fontSize: '1.875rem', fontWeight: 900, color: '#D9A441', lineHeight: 1 }}>15,000+</div>
+                    <div style={{ fontSize: '1.875rem', fontWeight: 900, color: '#F59E0B', lineHeight: 1 }}>15,000+</div>
                     <div style={{ fontSize: '0.8125rem', fontWeight: 600, color: '#64748B', marginTop: '6px' }}>Selections in Govt.</div>
                   </div>
 
                   <div style={{ backgroundColor: '#F8FAFC', padding: '16px', borderRadius: '12px', border: '1px solid #E2E8F0' }}>
-                    <div style={{ fontSize: '1.875rem', fontWeight: 900, color: '#142B4A', lineHeight: 1 }}>45+</div>
+                    <div style={{ fontSize: '1.875rem', fontWeight: 900, color: '#0F172A', lineHeight: 1 }}>45+</div>
                     <div style={{ fontSize: '0.8125rem', fontWeight: 600, color: '#64748B', marginTop: '6px' }}>Expert Faculties</div>
                   </div>
 
@@ -301,7 +298,7 @@ export default function HomePage() {
                       width: '44px',
                       height: '44px',
                       borderRadius: '50%',
-                      backgroundColor: '#2457A7',
+                      backgroundColor: '#1D4ED8',
                       color: '#FFFFFF',
                       display: 'flex',
                       alignItems: 'center',
@@ -314,7 +311,7 @@ export default function HomePage() {
                     1
                   </div>
                   <div>
-                    <div style={{ fontSize: '0.875rem', fontWeight: 800, color: '#142B4A' }}>
+                    <div style={{ fontSize: '0.875rem', fontWeight: 800, color: '#0F172A' }}>
                       Aarav Sharma — All India Rank 1
                     </div>
                     <div style={{ fontSize: '0.75rem', color: '#64748B' }}>
@@ -342,41 +339,41 @@ export default function HomePage() {
           <div className="hc-container">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '24px', alignItems: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#EFF6FF', color: '#2457A7', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#EFF6FF', color: '#1D4ED8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <Users size={24} />
                 </div>
                 <div>
-                  <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#142B4A' }}>50,000+</div>
+                  <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#0F172A' }}>50,000+</div>
                   <div style={{ fontSize: '0.8125rem', color: '#64748B', fontWeight: 600 }}>Total Students Enrolled</div>
                 </div>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#FEF3C7', color: '#D9A441', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#FEF3C7', color: '#F59E0B', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <Award size={24} />
                 </div>
                 <div>
-                  <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#142B4A' }}>15,000+</div>
+                  <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#0F172A' }}>15,000+</div>
                   <div style={{ fontSize: '0.8125rem', color: '#64748B', fontWeight: 600 }}>Selections in UPSC & PCS</div>
                 </div>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#EFF6FF', color: '#2457A7', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#EFF6FF', color: '#1D4ED8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <ShieldCheck size={24} />
                 </div>
                 <div>
-                  <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#142B4A' }}>45+</div>
+                  <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#0F172A' }}>45+</div>
                   <div style={{ fontSize: '0.8125rem', color: '#64748B', fontWeight: 600 }}>Permanent Expert Faculty</div>
                 </div>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#FEF3C7', color: '#D9A441', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ width: '48px', height: '48px', borderRadius: '12px', backgroundColor: '#FEF3C7', color: '#F59E0B', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <Clock size={24} />
                 </div>
                 <div>
-                  <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#142B4A' }}>18+ Years</div>
+                  <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#0F172A' }}>18+ Years</div>
                   <div style={{ fontSize: '0.8125rem', color: '#64748B', fontWeight: 600 }}>Of Academic Excellence</div>
                 </div>
               </div>
@@ -392,7 +389,7 @@ export default function HomePage() {
                 <span className="hc-badge">About Himanshu Classes</span>
                 <h2 className="hc-section-title">
                   Dedicated to Creating Officers, <br />
-                  <span style={{ color: '#2457A7' }}>Not Just Coaching Students</span>
+                  <span style={{ color: '#1D4ED8' }}>Not Just Coaching Students</span>
                 </h2>
                 <p style={{ fontSize: '1rem', color: '#64748B', lineHeight: 1.8, marginBottom: '20px' }}>
                   Founded in 2008 by Dr. Himanshu Rai, Himanshu Classes has stood at the pinnacle of competitive examination guidance in Northern India. We combine traditional academic discipline with state-of-the-art multimedia smart classrooms.
@@ -407,7 +404,7 @@ export default function HomePage() {
                       ✓
                     </div>
                     <div>
-                      <strong style={{ color: '#142B4A', fontSize: '0.9375rem' }}>Personalized One-on-One Mentorship:</strong>
+                      <strong style={{ color: '#0F172A', fontSize: '0.9375rem' }}>Personalized One-on-One Mentorship:</strong>
                       <span style={{ color: '#64748B', fontSize: '0.875rem' }}> Dedicated retired bureaucrats evaluate answers and conduct periodic reviews.</span>
                     </div>
                   </div>
@@ -417,7 +414,7 @@ export default function HomePage() {
                       ✓
                     </div>
                     <div>
-                      <strong style={{ color: '#142B4A', fontSize: '0.9375rem' }}>Comprehensive Standard Study Material:</strong>
+                      <strong style={{ color: '#0F172A', fontSize: '0.9375rem' }}>Comprehensive Standard Study Material:</strong>
                       <span style={{ color: '#64748B', fontSize: '0.875rem' }}> High quality printed and digital modules tailored to the latest exam pattern.</span>
                     </div>
                   </div>
@@ -427,7 +424,7 @@ export default function HomePage() {
                       ✓
                     </div>
                     <div>
-                      <strong style={{ color: '#142B4A', fontSize: '0.9375rem' }}>24x7 Silent Library & Computer Lab:</strong>
+                      <strong style={{ color: '#0F172A', fontSize: '0.9375rem' }}>24x7 Silent Library & Computer Lab:</strong>
                       <span style={{ color: '#64748B', fontSize: '0.875rem' }}> In-house high-speed reading room with air conditioning and power backup.</span>
                     </div>
                   </div>
@@ -444,16 +441,16 @@ export default function HomePage() {
               {/* Right Side Visual Block */}
               <div
                 style={{
-                  backgroundColor: '#142B4A',
+                  backgroundColor: '#0F172A',
                   color: '#FFFFFF',
                   borderRadius: '20px',
                   padding: '40px 32px',
-                  border: '3px solid #D9A441',
+                  border: '3px solid #F59E0B',
                   boxShadow: '0 20px 40px rgba(20, 43, 74, 0.15)',
                   position: 'relative'
                 }}
               >
-                <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: '#D9A441', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '8px' }}>
+                <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: '#F59E0B', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '8px' }}>
                   Director&apos;s Message
                 </div>
                 <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#FFFFFF', marginBottom: '16px' }}>
@@ -469,8 +466,8 @@ export default function HomePage() {
                       width: '54px',
                       height: '54px',
                       borderRadius: '50%',
-                      backgroundColor: '#D9A441',
-                      color: '#142B4A',
+                      backgroundColor: '#F59E0B',
+                      color: '#0F172A',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -482,7 +479,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <div style={{ fontSize: '1.0625rem', fontWeight: 800, color: '#FFFFFF' }}>Dr. Himanshu Rai</div>
-                    <div style={{ fontSize: '0.8125rem', color: '#D9A441' }}>Director & Chief Mentor • Ex-Civil Services Officer</div>
+                    <div style={{ fontSize: '0.8125rem', color: '#F59E0B' }}>Director & Chief Mentor • Ex-Civil Services Officer</div>
                   </div>
                 </div>
               </div>
@@ -511,10 +508,10 @@ export default function HomePage() {
                       borderRadius: '8px',
                       fontSize: '0.8125rem',
                       fontWeight: 700,
-                      backgroundColor: activeCategory === cat ? '#142B4A' : '#F1F5F9',
+                      backgroundColor: activeCategory === cat ? '#0F172A' : '#F1F5F9',
                       color: activeCategory === cat ? '#FFFFFF' : '#475569',
                       border: '1px solid',
-                      borderColor: activeCategory === cat ? '#142B4A' : '#E2E8F0',
+                      borderColor: activeCategory === cat ? '#0F172A' : '#E2E8F0',
                       transition: 'all 0.15s ease'
                     }}
                   >
@@ -531,10 +528,10 @@ export default function HomePage() {
                   {/* Card Header Banner */}
                   <div
                     style={{
-                      backgroundColor: '#142B4A',
+                      backgroundColor: '#0F172A',
                       color: '#FFFFFF',
                       padding: '20px 24px',
-                      borderBottom: '3px solid #D9A441',
+                      borderBottom: '3px solid #F59E0B',
                       position: 'relative'
                     }}
                   >
@@ -544,8 +541,8 @@ export default function HomePage() {
                           position: 'absolute',
                           top: '12px',
                           right: '16px',
-                          backgroundColor: '#D9A441',
-                          color: '#142B4A',
+                          backgroundColor: '#F59E0B',
+                          color: '#0F172A',
                           fontSize: '0.6875rem',
                           fontWeight: 800,
                           padding: '3px 8px',
@@ -556,7 +553,7 @@ export default function HomePage() {
                         {course.badge}
                       </span>
                     )}
-                    <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#D9A441', textTransform: 'uppercase' }}>
+                    <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#F59E0B', textTransform: 'uppercase' }}>
                       {course.category}
                     </span>
                     <h3 style={{ fontSize: '1.1875rem', fontWeight: 800, color: '#FFFFFF', marginTop: '4px', lineHeight: 1.3 }}>
@@ -586,11 +583,11 @@ export default function HomePage() {
                     >
                       <div>
                         <span style={{ color: '#64748B', display: 'block', fontSize: '0.6875rem' }}>Duration</span>
-                        <strong style={{ color: '#142B4A' }}>{course.duration}</strong>
+                        <strong style={{ color: '#0F172A' }}>{course.duration}</strong>
                       </div>
                       <div style={{ textAlign: 'right' }}>
                         <span style={{ color: '#64748B', display: 'block', fontSize: '0.6875rem' }}>Course Fee</span>
-                        <strong style={{ color: '#2457A7', fontSize: '1rem' }}>{course.fee}</strong>
+                        <strong style={{ color: '#1D4ED8', fontSize: '1rem' }}>{course.fee}</strong>
                       </div>
                     </div>
 
@@ -605,7 +602,7 @@ export default function HomePage() {
                             key={i}
                             style={{
                               backgroundColor: '#EFF6FF',
-                              color: '#2457A7',
+                              color: '#1D4ED8',
                               fontSize: '0.75rem',
                               fontWeight: 600,
                               padding: '3px 8px',
@@ -713,10 +710,10 @@ export default function HomePage() {
 
             <div className="hc-grid-3">
               <div className="hc-card" style={{ padding: '32px 28px' }}>
-                <div style={{ width: '52px', height: '52px', borderRadius: '12px', backgroundColor: '#EFF6FF', color: '#2457A7', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
+                <div style={{ width: '52px', height: '52px', borderRadius: '12px', backgroundColor: '#EFF6FF', color: '#1D4ED8', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                   <Users size={26} />
                 </div>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#142B4A', marginBottom: '10px' }}>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '10px' }}>
                   Ex-Bureaucrat & Ph.D. Faculty
                 </h3>
                 <p style={{ fontSize: '0.9375rem', color: '#64748B', lineHeight: 1.7 }}>
@@ -725,10 +722,10 @@ export default function HomePage() {
               </div>
 
               <div className="hc-card" style={{ padding: '32px 28px' }}>
-                <div style={{ width: '52px', height: '52px', borderRadius: '12px', backgroundColor: '#FEF3C7', color: '#D9A441', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
+                <div style={{ width: '52px', height: '52px', borderRadius: '12px', backgroundColor: '#FEF3C7', color: '#F59E0B', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                   <Target size={26} />
                 </div>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#142B4A', marginBottom: '10px' }}>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '10px' }}>
                   Daily Mains Answer Writing
                 </h3>
                 <p style={{ fontSize: '0.9375rem', color: '#64748B', lineHeight: 1.7 }}>
@@ -737,10 +734,10 @@ export default function HomePage() {
               </div>
 
               <div className="hc-card" style={{ padding: '32px 28px' }}>
-                <div style={{ width: '52px', height: '52px', borderRadius: '12px', backgroundColor: '#EFF6FF', color: '#2457A7', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
+                <div style={{ width: '52px', height: '52px', borderRadius: '12px', backgroundColor: '#EFF6FF', color: '#1D4ED8', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                   <BookOpen size={26} />
                 </div>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#142B4A', marginBottom: '10px' }}>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '10px' }}>
                   Complete Study Kit
                 </h3>
                 <p style={{ fontSize: '0.9375rem', color: '#64748B', lineHeight: 1.7 }}>
@@ -749,10 +746,10 @@ export default function HomePage() {
               </div>
 
               <div className="hc-card" style={{ padding: '32px 28px' }}>
-                <div style={{ width: '52px', height: '52px', borderRadius: '12px', backgroundColor: '#FEF3C7', color: '#D9A441', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
+                <div style={{ width: '52px', height: '52px', borderRadius: '12px', backgroundColor: '#FEF3C7', color: '#F59E0B', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                   <Clock size={26} />
                 </div>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#142B4A', marginBottom: '10px' }}>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '10px' }}>
                   24x7 Silent Library & Lab
                 </h3>
                 <p style={{ fontSize: '0.9375rem', color: '#64748B', lineHeight: 1.7 }}>
@@ -761,10 +758,10 @@ export default function HomePage() {
               </div>
 
               <div className="hc-card" style={{ padding: '32px 28px' }}>
-                <div style={{ width: '52px', height: '52px', borderRadius: '12px', backgroundColor: '#EFF6FF', color: '#2457A7', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
+                <div style={{ width: '52px', height: '52px', borderRadius: '12px', backgroundColor: '#EFF6FF', color: '#1D4ED8', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                   <Award size={26} />
                 </div>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#142B4A', marginBottom: '10px' }}>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '10px' }}>
                   Realistic Mock Interview Boards
                 </h3>
                 <p style={{ fontSize: '0.9375rem', color: '#64748B', lineHeight: 1.7 }}>
@@ -773,10 +770,10 @@ export default function HomePage() {
               </div>
 
               <div className="hc-card" style={{ padding: '32px 28px' }}>
-                <div style={{ width: '52px', height: '52px', borderRadius: '12px', backgroundColor: '#FEF3C7', color: '#D9A441', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
+                <div style={{ width: '52px', height: '52px', borderRadius: '12px', backgroundColor: '#FEF3C7', color: '#F59E0B', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                   <ShieldCheck size={26} />
                 </div>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#142B4A', marginBottom: '10px' }}>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '10px' }}>
                   Recorded Lecture Backups
                 </h3>
                 <p style={{ fontSize: '0.9375rem', color: '#64748B', lineHeight: 1.7 }}>
@@ -807,9 +804,9 @@ export default function HomePage() {
                       width: '96px',
                       height: '96px',
                       borderRadius: '50%',
-                      backgroundColor: '#142B4A',
-                      color: '#D9A441',
-                      border: '3px solid #D9A441',
+                      backgroundColor: '#0F172A',
+                      color: '#F59E0B',
+                      border: '3px solid #F59E0B',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -822,10 +819,10 @@ export default function HomePage() {
                     {fac.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
                   </div>
 
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#142B4A', marginBottom: '4px' }}>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '4px' }}>
                     {fac.name}
                   </h3>
-                  <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: '#D9A441', textTransform: 'uppercase', marginBottom: '8px' }}>
+                  <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: '#F59E0B', textTransform: 'uppercase', marginBottom: '8px' }}>
                     {fac.designation}
                   </div>
 
@@ -833,7 +830,7 @@ export default function HomePage() {
                     style={{
                       fontSize: '0.875rem',
                       fontWeight: 600,
-                      color: '#2457A7',
+                      color: '#1D4ED8',
                       backgroundColor: '#EFF6FF',
                       padding: '4px 10px',
                       borderRadius: '6px',
@@ -884,14 +881,14 @@ export default function HomePage() {
                   style={{
                     padding: '28px',
                     position: 'relative',
-                    borderTop: '4px solid #D9A441'
+                    borderTop: '4px solid #F59E0B'
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
                     <span
                       style={{
-                        backgroundColor: '#D9A441',
-                        color: '#142B4A',
+                        backgroundColor: '#F59E0B',
+                        color: '#0F172A',
                         fontWeight: 900,
                         fontSize: '0.9375rem',
                         padding: '4px 12px',
@@ -905,10 +902,10 @@ export default function HomePage() {
                     </span>
                   </div>
 
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#142B4A', marginBottom: '4px' }}>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '4px' }}>
                     {topper.name}
                   </h3>
-                  <div style={{ fontSize: '0.875rem', fontWeight: 700, color: '#2457A7', marginBottom: '2px' }}>
+                  <div style={{ fontSize: '0.875rem', fontWeight: 700, color: '#1D4ED8', marginBottom: '2px' }}>
                     {topper.exam}
                   </div>
                   <div style={{ fontSize: '0.75rem', color: '#64748B', marginBottom: '16px' }}>
@@ -924,7 +921,7 @@ export default function HomePage() {
                       backgroundColor: '#F8FAFC',
                       padding: '12px 14px',
                       borderRadius: '8px',
-                      borderLeft: '3px solid #2457A7'
+                      borderLeft: '3px solid #1D4ED8'
                     }}
                   >
                     &ldquo;{topper.testimonial}&rdquo;
@@ -956,9 +953,9 @@ export default function HomePage() {
             <div className="hc-grid-4">
               {TESTIMONIALS_DATA.map((t) => (
                 <div key={t.id} className="hc-card" style={{ padding: '24px', display: 'flex', flexDirection: 'column' }}>
-                  <div style={{ display: 'flex', color: '#D9A441', gap: '3px', marginBottom: '14px' }}>
+                  <div style={{ display: 'flex', color: '#F59E0B', gap: '3px', marginBottom: '14px' }}>
                     {[...Array(t.rating)].map((_, i) => (
-                      <Star key={i} size={16} fill="#D9A441" />
+                      <Star key={i} size={16} fill="#F59E0B" />
                     ))}
                   </div>
 
@@ -967,8 +964,8 @@ export default function HomePage() {
                   </p>
 
                   <div style={{ borderTop: '1px solid #E2E8F0', paddingTop: '14px' }}>
-                    <div style={{ fontSize: '0.9375rem', fontWeight: 800, color: '#142B4A' }}>{t.name}</div>
-                    <div style={{ fontSize: '0.75rem', color: '#2457A7', fontWeight: 600 }}>{t.role}</div>
+                    <div style={{ fontSize: '0.9375rem', fontWeight: 800, color: '#0F172A' }}>{t.name}</div>
+                    <div style={{ fontSize: '0.75rem', color: '#1D4ED8', fontWeight: 600 }}>{t.role}</div>
                     <div style={{ fontSize: '0.6875rem', color: '#64748B' }}>{t.exam}</div>
                   </div>
                 </div>
@@ -995,7 +992,7 @@ export default function HomePage() {
                   <div
                     style={{
                       height: '200px',
-                      backgroundColor: '#142B4A',
+                      backgroundColor: '#0F172A',
                       display: 'flex',
                       flexDirection: 'column',
                       alignItems: 'center',
@@ -1003,11 +1000,11 @@ export default function HomePage() {
                       color: '#FFFFFF',
                       padding: '20px',
                       textAlign: 'center',
-                      background: 'linear-gradient(135deg, #142B4A 0%, #2457A7 100%)'
+                      background: 'linear-gradient(135deg, #0F172A 0%, #1D4ED8 100%)'
                     }}
                   >
-                    <BookOpen size={36} style={{ color: '#D9A441', marginBottom: '10px' }} />
-                    <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#D9A441', textTransform: 'uppercase' }}>
+                    <BookOpen size={36} style={{ color: '#F59E0B', marginBottom: '10px' }} />
+                    <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#F59E0B', textTransform: 'uppercase' }}>
                       {item.category}
                     </span>
                     <strong style={{ fontSize: '1rem', marginTop: '4px' }}>{item.title}</strong>
@@ -1059,7 +1056,7 @@ export default function HomePage() {
                         justifyContent: 'space-between',
                         textAlign: 'left',
                         gap: '16px',
-                        color: isOpen ? '#2457A7' : '#142B4A',
+                        color: isOpen ? '#1D4ED8' : '#0F172A',
                         fontWeight: 700,
                         fontSize: '1rem'
                       }}
@@ -1071,7 +1068,7 @@ export default function HomePage() {
                           transform: isOpen ? 'rotate(180deg)' : 'none',
                           transition: 'transform 0.2s',
                           flexShrink: 0,
-                          color: isOpen ? '#2457A7' : '#94A3B8'
+                          color: isOpen ? '#1D4ED8' : '#94A3B8'
                         }}
                       />
                     </button>
@@ -1098,7 +1095,7 @@ export default function HomePage() {
         </section>
 
         {/* ── 11. CONTACT & FRONTEND-ONLY ADMISSION FORM ── */}
-        <section className="hc-section hc-section-alt" id="contact" style={{ backgroundColor: '#142B4A', color: '#FFFFFF' }}>
+        <section className="hc-section hc-section-alt" id="contact" style={{ backgroundColor: '#0F172A', color: '#FFFFFF' }}>
           <div className="hc-container">
             <div
               style={{
@@ -1114,7 +1111,7 @@ export default function HomePage() {
                 <span
                   style={{
                     backgroundColor: 'rgba(217,164,65,0.2)',
-                    color: '#D9A441',
+                    color: '#F59E0B',
                     fontSize: '0.75rem',
                     fontWeight: 700,
                     padding: '4px 12px',
@@ -1134,21 +1131,21 @@ export default function HomePage() {
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                   <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-                    <div style={{ width: '44px', height: '44px', borderRadius: '10px', backgroundColor: 'rgba(217,164,65,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#D9A441', flexShrink: 0 }}>
+                    <div style={{ width: '44px', height: '44px', borderRadius: '10px', backgroundColor: 'rgba(217,164,65,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#F59E0B', flexShrink: 0 }}>
                       <MapPin size={22} />
                     </div>
                     <div>
-                      <div style={{ color: '#D9A441', fontSize: '0.8125rem', fontWeight: 700, textTransform: 'uppercase' }}>Campus Address</div>
+                      <div style={{ color: '#F59E0B', fontSize: '0.8125rem', fontWeight: 700, textTransform: 'uppercase' }}>Campus Address</div>
                       <div style={{ fontSize: '0.9375rem', color: '#FFFFFF', marginTop: '2px', lineHeight: 1.6 }}>{INSTITUTE_INFO.address}</div>
                     </div>
                   </div>
 
                   <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-                    <div style={{ width: '44px', height: '44px', borderRadius: '10px', backgroundColor: 'rgba(217,164,65,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#D9A441', flexShrink: 0 }}>
+                    <div style={{ width: '44px', height: '44px', borderRadius: '10px', backgroundColor: 'rgba(217,164,65,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#F59E0B', flexShrink: 0 }}>
                       <Phone size={22} />
                     </div>
                     <div>
-                      <div style={{ color: '#D9A441', fontSize: '0.8125rem', fontWeight: 700, textTransform: 'uppercase' }}>Direct Admission Helpline</div>
+                      <div style={{ color: '#F59E0B', fontSize: '0.8125rem', fontWeight: 700, textTransform: 'uppercase' }}>Direct Admission Helpline</div>
                       <div style={{ fontSize: '1.125rem', color: '#FFFFFF', fontWeight: 800, marginTop: '2px' }}>
                         <a href={`tel:${INSTITUTE_INFO.phone}`} style={{ color: '#FFFFFF' }}>{INSTITUTE_INFO.phone}</a>
                       </div>
@@ -1157,11 +1154,11 @@ export default function HomePage() {
                   </div>
 
                   <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-                    <div style={{ width: '44px', height: '44px', borderRadius: '10px', backgroundColor: 'rgba(217,164,65,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#D9A441', flexShrink: 0 }}>
+                    <div style={{ width: '44px', height: '44px', borderRadius: '10px', backgroundColor: 'rgba(217,164,65,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#F59E0B', flexShrink: 0 }}>
                       <Mail size={22} />
                     </div>
                     <div>
-                      <div style={{ color: '#D9A441', fontSize: '0.8125rem', fontWeight: 700, textTransform: 'uppercase' }}>Official Email</div>
+                      <div style={{ color: '#F59E0B', fontSize: '0.8125rem', fontWeight: 700, textTransform: 'uppercase' }}>Official Email</div>
                       <div style={{ fontSize: '0.9375rem', color: '#FFFFFF', marginTop: '2px' }}>
                         <a href={`mailto:${INSTITUTE_INFO.email}`} style={{ color: '#FFFFFF' }}>{INSTITUTE_INFO.email}</a>
                       </div>
@@ -1201,14 +1198,14 @@ export default function HomePage() {
                   borderRadius: '20px',
                   padding: '36px 32px',
                   boxShadow: '0 25px 60px -15px rgba(0, 0, 0, 0.35)',
-                  border: '2px solid #D9A441'
+                  border: '2px solid #F59E0B'
                 }}
               >
                 <div style={{ marginBottom: '20px' }}>
-                  <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#D9A441', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#F59E0B', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                     Fast Registration
                   </span>
-                  <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#142B4A', marginTop: '4px' }}>
+                  <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: '#0F172A', marginTop: '4px' }}>
                     Request Free Counseling Call
                   </h3>
                   <p style={{ fontSize: '0.8125rem', color: '#64748B', marginTop: '4px' }}>

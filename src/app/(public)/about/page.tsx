@@ -29,10 +29,10 @@ export default function AboutPage() {
         {/* Banner */}
         <section
           style={{
-            backgroundColor: '#142B4A',
+            backgroundColor: '#0F172A',
             color: '#FFFFFF',
             padding: '56px 0',
-            borderBottom: '4px solid #D9A441',
+            borderBottom: '4px solid #F59E0B',
             textAlign: 'center'
           }}
         >
@@ -40,7 +40,7 @@ export default function AboutPage() {
             <span
               style={{
                 backgroundColor: 'rgba(217, 164, 65, 0.2)',
-                color: '#D9A441',
+                color: '#F59E0B',
                 padding: '4px 14px',
                 borderRadius: '9999px',
                 fontSize: '0.8125rem',
@@ -84,14 +84,14 @@ export default function AboutPage() {
 
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginTop: '32px' }}>
                   <div style={{ backgroundColor: '#FFFFFF', padding: '20px', borderRadius: '12px', border: '1px solid #E2E8F0' }}>
-                    <div style={{ fontSize: '1.25rem', fontWeight: 800, color: '#142B4A', marginBottom: '8px' }}>Our Mission</div>
+                    <div style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '8px' }}>Our Mission</div>
                     <p style={{ fontSize: '0.875rem', color: '#64748B', lineHeight: 1.6 }}>
                       To democratize high-level civil services and competitive exam guidance for students across all backgrounds.
                     </p>
                   </div>
 
                   <div style={{ backgroundColor: '#FFFFFF', padding: '20px', borderRadius: '12px', border: '1px solid #E2E8F0' }}>
-                    <div style={{ fontSize: '1.25rem', fontWeight: 800, color: '#142B4A', marginBottom: '8px' }}>Our Vision</div>
+                    <div style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '8px' }}>Our Vision</div>
                     <p style={{ fontSize: '0.875rem', color: '#64748B', lineHeight: 1.6 }}>
                       To foster socially conscious, ethically upright, and academically brilliant administrators who serve India with distinction.
                     </p>
@@ -105,7 +105,7 @@ export default function AboutPage() {
                   backgroundColor: '#FFFFFF',
                   borderRadius: '16px',
                   padding: '36px 28px',
-                  border: '2px solid #D9A441',
+                  border: '2px solid #F59E0B',
                   boxShadow: '0 20px 40px rgba(20, 43, 74, 0.08)',
                   textAlign: 'center'
                 }}
@@ -115,9 +115,9 @@ export default function AboutPage() {
                     width: '90px',
                     height: '90px',
                     borderRadius: '50%',
-                    backgroundColor: '#142B4A',
-                    color: '#D9A441',
-                    border: '3px solid #D9A441',
+                    backgroundColor: '#0F172A',
+                    color: '#F59E0B',
+                    border: '3px solid #F59E0B',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -128,8 +128,8 @@ export default function AboutPage() {
                 >
                   HS
                 </div>
-                <h3 style={{ fontSize: '1.375rem', fontWeight: 800, color: '#142B4A' }}>Dr. Himanshu Rai</h3>
-                <div style={{ fontSize: '0.8125rem', color: '#D9A441', fontWeight: 700, textTransform: 'uppercase', marginBottom: '14px' }}>
+                <h3 style={{ fontSize: '1.375rem', fontWeight: 800, color: '#0F172A' }}>Dr. Himanshu Rai</h3>
+                <div style={{ fontSize: '0.8125rem', color: '#F59E0B', fontWeight: 700, textTransform: 'uppercase', marginBottom: '14px' }}>
                   Founder, Director & Chief Mentor
                 </div>
                 <p style={{ fontSize: '0.875rem', color: '#64748B', lineHeight: 1.7, fontStyle: 'italic', marginBottom: '24px' }}>

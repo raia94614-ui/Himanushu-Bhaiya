@@ -93,11 +93,11 @@ export default function EnquiryModal({ isOpen, onClose, defaultCourse = '' }: En
         {/* Modal Header */}
         <div
           style={{
-            backgroundColor: '#142B4A',
+            backgroundColor: '#0F172A',
             color: '#FFFFFF',
             padding: '24px 28px',
             position: 'relative',
-            borderBottom: '3px solid #D9A441'
+            borderBottom: '3px solid #F59E0B'
           }}
         >
           <button
@@ -118,7 +118,7 @@ export default function EnquiryModal({ isOpen, onClose, defaultCourse = '' }: En
           >
             <X size={20} />
           </button>
-          <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: '#D9A441', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+          <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: '#F59E0B', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
             Admission Enquiry Form
           </div>
           <h3 style={{ fontSize: '1.375rem', fontWeight: 800, color: '#FFFFFF', marginTop: '4px' }}>
@@ -148,7 +148,7 @@ export default function EnquiryModal({ isOpen, onClose, defaultCourse = '' }: En
               >
                 <CheckCircle2 size={36} />
               </div>
-              <h4 style={{ fontSize: '1.375rem', fontWeight: 800, color: '#142B4A', marginBottom: '8px' }}>
+              <h4 style={{ fontSize: '1.375rem', fontWeight: 800, color: '#0F172A', marginBottom: '8px' }}>
                 Enquiry Registered Successfully!
               </h4>
               <p style={{ fontSize: '0.9375rem', color: '#64748B', lineHeight: 1.6, marginBottom: '20px' }}>
@@ -307,7 +307,7 @@ export default function EnquiryModal({ isOpen, onClose, defaultCourse = '' }: En
                         cursor: 'pointer',
                         padding: '6px 12px',
                         borderRadius: '6px',
-                        border: `1px solid ${formData.batchType === m ? '#2457A7' : '#E2E8F0'}`,
+                        border: `1px solid ${formData.batchType === m ? '#1D4ED8' : '#E2E8F0'}`,
                         backgroundColor: formData.batchType === m ? '#EFF6FF' : '#FFFFFF'
                       }}
                     >
@@ -316,7 +316,7 @@ export default function EnquiryModal({ isOpen, onClose, defaultCourse = '' }: En
                         name="batchType"
                         checked={formData.batchType === m}
                         onChange={() => setFormData({ ...formData, batchType: m })}
-                        style={{ accentColor: '#2457A7' }}
+                        style={{ accentColor: '#1D4ED8' }}
                       />
                       <span>{m}</span>
                     </label>

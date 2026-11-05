@@ -44,10 +44,10 @@ export default function StudyMaterialsPage() {
         {/* Banner */}
         <section
           style={{
-            backgroundColor: '#142B4A',
+            backgroundColor: '#0F172A',
             color: '#FFFFFF',
             padding: '56px 0',
-            borderBottom: '4px solid #D9A441',
+            borderBottom: '4px solid #F59E0B',
             textAlign: 'center'
           }}
         >
@@ -55,7 +55,7 @@ export default function StudyMaterialsPage() {
             <span
               style={{
                 backgroundColor: 'rgba(217, 164, 65, 0.2)',
-                color: '#D9A441',
+                color: '#F59E0B',
                 padding: '4px 14px',
                 borderRadius: '9999px',
                 fontSize: '0.8125rem',
@@ -149,7 +149,7 @@ export default function StudyMaterialsPage() {
                       <span
                         style={{
                           backgroundColor: '#EFF6FF',
-                          color: '#2457A7',
+                          color: '#1D4ED8',
                           fontSize: '0.75rem',
                           fontWeight: 700,
                           padding: '4px 10px',
@@ -163,7 +163,7 @@ export default function StudyMaterialsPage() {
                       </span>
                     </div>
 
-                    <h3 style={{ fontSize: '1.1875rem', fontWeight: 800, color: '#142B4A', marginBottom: '8px' }}>
+                    <h3 style={{ fontSize: '1.1875rem', fontWeight: 800, color: '#0F172A', marginBottom: '8px' }}>
                       {mat.title}
                     </h3>
 

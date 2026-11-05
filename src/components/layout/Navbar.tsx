@@ -57,7 +57,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
       {/* ── TOP NOTIFICATION & CONTACT BAR ── */}
       <div 
         style={{
-          backgroundColor: '#142B4A',
+          backgroundColor: '#0F172A',
           color: '#CBD5E1',
           fontSize: '0.8125rem',
           borderBottom: '1px solid rgba(255,255,255,0.08)',
@@ -80,19 +80,19 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             <a 
               href={`tel:${INSTITUTE_INFO.phone}`} 
               style={{ display: 'flex', alignItems: 'center', gap: '6px', transition: 'color 0.2s' }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#D9A441')}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#F59E0B')}
               onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}
             >
-              <Phone size={13} style={{ color: '#D9A441' }} />
+              <Phone size={13} style={{ color: '#F59E0B' }} />
               <span>{INSTITUTE_INFO.phone}</span>
             </a>
             <a 
               href={`mailto:${INSTITUTE_INFO.email}`} 
               style={{ display: 'flex', alignItems: 'center', gap: '6px', transition: 'color 0.2s' }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#D9A441')}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#F59E0B')}
               onMouseLeave={(e) => (e.currentTarget.style.color = '#CBD5E1')}
             >
-              <Mail size={13} style={{ color: '#D9A441' }} />
+              <Mail size={13} style={{ color: '#F59E0B' }} />
               <span>{INSTITUTE_INFO.email}</span>
             </a>
           </div>
@@ -102,7 +102,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             <span 
               style={{
                 backgroundColor: 'rgba(217, 164, 65, 0.2)',
-                color: '#D9A441',
+                color: '#F59E0B',
                 padding: '2px 8px',
                 borderRadius: '4px',
                 fontWeight: 700,
@@ -153,12 +153,12 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                 width: '46px',
                 height: '46px',
                 borderRadius: '12px',
-                backgroundColor: '#142B4A',
+                backgroundColor: '#0F172A',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: '#D9A441',
-                border: '2px solid #D9A441',
+                color: '#F59E0B',
+                border: '2px solid #F59E0B',
                 boxShadow: '0 4px 12px rgba(20, 43, 74, 0.15)',
                 flexShrink: 0
               }}
@@ -172,7 +172,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                 style={{
                   fontSize: '1.3125rem',
                   fontWeight: 800,
-                  color: '#142B4A',
+                  color: '#0F172A',
                   letterSpacing: '-0.02em',
                   lineHeight: 1.15
                 }}
@@ -183,7 +183,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                 style={{
                   fontSize: '0.6875rem',
                   fontWeight: 600,
-                  color: '#D9A441',
+                  color: '#F59E0B',
                   textTransform: 'uppercase',
                   letterSpacing: '0.06em',
                   marginTop: '2px'
@@ -224,11 +224,11 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                         borderRadius: '8px',
                         fontSize: '0.9375rem',
                         fontWeight: 600,
-                        color: isActive ? '#2457A7' : '#1E293B',
+                        color: isActive ? '#1D4ED8' : '#1E293B',
                         backgroundColor: isActive ? '#F1F5F9' : 'transparent',
                         transition: 'all 0.15s ease'
                       }}
-                      onMouseEnter={(e) => (e.currentTarget.style.color = '#2457A7')}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = '#1D4ED8')}
                       onMouseLeave={(e) => !isActive && (e.currentTarget.style.color = '#1E293B')}
                     >
                       <span>{item.label}</span>
@@ -276,14 +276,14 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                             onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
                           >
                             <div>
-                              <div style={{ fontSize: '0.875rem', fontWeight: 700, color: '#142B4A' }}>
+                              <div style={{ fontSize: '0.875rem', fontWeight: 700, color: '#0F172A' }}>
                                 {course.title.split('(')[0]}
                               </div>
                               <div style={{ fontSize: '0.75rem', color: '#64748B' }}>
                                 {course.duration} • {course.fee}
                               </div>
                             </div>
-                            <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#2457A7', backgroundColor: '#EFF6FF', padding: '3px 8px', borderRadius: '4px' }}>
+                            <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#1D4ED8', backgroundColor: '#EFF6FF', padding: '3px 8px', borderRadius: '4px' }}>
                               View
                             </span>
                           </Link>
@@ -296,7 +296,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                             padding: '10px',
                             borderRadius: '8px',
                             backgroundColor: '#F8FAFC',
-                            color: '#2457A7',
+                            color: '#1D4ED8',
                             fontSize: '0.8125rem',
                             fontWeight: 700,
                             textAlign: 'center',
@@ -323,11 +323,11 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                     borderRadius: '8px',
                     fontSize: '0.9375rem',
                     fontWeight: 600,
-                    color: isActive ? '#2457A7' : '#1E293B',
+                    color: isActive ? '#1D4ED8' : '#1E293B',
                     backgroundColor: isActive ? '#EFF6FF' : 'transparent',
                     transition: 'all 0.15s ease'
                   }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = '#2457A7')}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = '#1D4ED8')}
                   onMouseLeave={(e) => !isActive && (e.currentTarget.style.color = '#1E293B')}
                 >
                   {item.label}
@@ -367,7 +367,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                 fontSize: '0.875rem'
               }}
             >
-              <Sparkles size={15} style={{ color: '#D9A441' }} />
+              <Sparkles size={15} style={{ color: '#F59E0B' }} />
               <span>Student Enquiry</span>
             </button>
           </div>
@@ -380,7 +380,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
               display: 'none',
               padding: '8px',
               borderRadius: '8px',
-              color: '#142B4A',
+              color: '#0F172A',
               backgroundColor: '#F1F5F9'
             }}
             className="hc-mobile-toggle"
@@ -410,7 +410,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
               maxHeight: 'calc(100vh - 76px)',
               overflowY: 'auto',
               padding: '24px 20px',
-              borderBottom: '2px solid #D9A441',
+              borderBottom: '2px solid #F59E0B',
               boxShadow: '0 20px 40px rgba(0,0,0,0.15)'
             }}
             onClick={(e) => e.stopPropagation()}
@@ -426,7 +426,7 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
                     borderRadius: '8px',
                     fontSize: '1rem',
                     fontWeight: 700,
-                    color: pathname === link.href ? '#2457A7' : '#142B4A',
+                    color: pathname === link.href ? '#1D4ED8' : '#0F172A',
                     backgroundColor: pathname === link.href ? '#EFF6FF' : '#F8FAFC',
                     display: 'flex',
                     alignItems: 'center',
