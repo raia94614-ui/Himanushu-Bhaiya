@@ -214,7 +214,8 @@ export default function Navbar({ onOpenEnquiry }: NavbarProps) {
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '4px'
+              gap: '6px',
+              marginLeft: '24px'
             }}
             className="hc-desktop-nav"
           >
